@@ -45,7 +45,7 @@ namespace CompanyEmployees.API.Controllers
             if (company == null)
             {
                 _logger.LogInfo($"Company with id: {id} doesn't exist in the database.");
-                
+
                 return NotFound();
             }
             else
@@ -91,7 +91,7 @@ namespace CompanyEmployees.API.Controllers
             }
 
             var companyEntity = _mapper.Map<Company>(company);
-            
+
             _repository.Company.CreateCompany(companyEntity);
             _repository.Save();
 
@@ -139,6 +139,31 @@ namespace CompanyEmployees.API.Controllers
             }
 
             _repository.Company.DeleteCompany(company);
+            _repository.Save();
+
+            return NoContent();
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateCompany(Guid id, [FromBody] CompanyForUpdateDto company) 
+        {
+            if (company == null)
+            {
+                _logger.LogError("CompanyForUpdateDto object sent from client is null.");
+
+                return BadRequest("CompanyForUpdateDto object is null");
+            }
+
+            var companyEntity = _repository.Company.GetCompany(id, trackChanges: true);
+
+            if (companyEntity == null)
+            {
+                _logger.LogInfo($"Company with id: {id} doesn't exist in the database.");
+
+                return NotFound();
+            }
+
+            _mapper.Map(company, companyEntity);
             _repository.Save();
 
             return NoContent();
