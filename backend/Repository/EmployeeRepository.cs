@@ -21,6 +21,9 @@ namespace Repository
             Create(employee);
         }
 
+        public void DeleteEmployee(Employee employee) =>
+            Delete(employee);
+
         public IEnumerable<Employee> GetAllEmployees(Guid companyId, bool trackChanges) => 
             FindByCondition(c => c.CompanyId.Equals(companyId),
                             trackChanges).OrderBy(e => e.Name);
