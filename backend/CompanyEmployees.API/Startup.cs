@@ -50,7 +50,8 @@ namespace CompanyEmployees.API
             {
                 config.RespectBrowserAcceptHeader = true; // to accept http Accept header
                 config.ReturnHttpNotAcceptable = true; // return 406 not accepted if media typa in accept not supported
-            }).AddXmlDataContractSerializerFormatters() // to return serialized xml
+            }).AddNewtonsoftJson() // for use newton packages to use json patch doc
+            .AddXmlDataContractSerializerFormatters() // to return serialized xml
             .AddCustomCSVFormatter();
         }
 
