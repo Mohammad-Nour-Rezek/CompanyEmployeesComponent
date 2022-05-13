@@ -23,7 +23,7 @@ namespace CompanyEmployees.API
 
             CreateMap<EmployeeForUpdateDto, Employee>().ReverseMap();
 
-            CreateMap<CompanyForUpdateDto, Company>();
+            CreateMap<CompanyForUpdateDto, Company>().ReverseMap();
         }
     }
 }

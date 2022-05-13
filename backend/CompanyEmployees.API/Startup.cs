@@ -53,6 +53,12 @@ namespace CompanyEmployees.API
             }).AddNewtonsoftJson() // for use newton packages to use json patch doc
             .AddXmlDataContractSerializerFormatters() // to return serialized xml
             .AddCustomCSVFormatter();
+
+            services.Configure<ApiBehaviorOptions>(option =>
+                {
+                    option.SuppressModelStateInvalidFilter = true; // to return 422 (Unprocessed Entity) insted of 400 (Bad Rquest) on invalid model state
+                }
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

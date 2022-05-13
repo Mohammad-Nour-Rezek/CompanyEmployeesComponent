@@ -4,6 +4,7 @@ using Contracts;
 using Entities.DataTransferObjects;
 using Entities.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -90,6 +91,12 @@ namespace CompanyEmployees.API.Controllers
                 return BadRequest("CompanyForCreationDto object is null");
             }
 
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the CompanyForCreationDto object");
+                return UnprocessableEntity(ModelState);
+            }
+
             var companyEntity = _mapper.Map<Company>(company);
 
             _repository.Company.CreateCompany(companyEntity);
@@ -108,6 +115,12 @@ namespace CompanyEmployees.API.Controllers
                 _logger.LogError("Company collection sent from client is null.");
 
                 return BadRequest("Company collection is null");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the CompanyForCreationDto object");
+                return UnprocessableEntity(ModelState);
             }
 
             var companyEntities = _mapper.Map<IEnumerable<Company>>(companyCollection);
@@ -154,6 +167,12 @@ namespace CompanyEmployees.API.Controllers
                 return BadRequest("CompanyForUpdateDto object is null");
             }
 
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the CompanyForUpdateDto object");
+                return UnprocessableEntity(ModelState);
+            }
+
             var companyEntity = _repository.Company.GetCompany(id, trackChanges: true);
 
             if (companyEntity == null)
@@ -164,6 +183,43 @@ namespace CompanyEmployees.API.Controllers
             }
 
             _mapper.Map(company, companyEntity);
+            _repository.Save();
+
+            return NoContent();
+        }
+
+        [HttpPatch("{id}")]
+        public IActionResult UpdateCompanyPartially(Guid id, [FromBody] JsonPatchDocument<CompanyForUpdateDto> patchDocument)
+        {
+            if (patchDocument == null)
+            {
+                _logger.LogError("patchDocument object sent from client is null.");
+                return BadRequest("patchDocument object is null");
+            }
+
+            var companyEntity = _repository.Company.GetCompany(id, trackChanges: true);
+
+            if (companyEntity == null)
+            {
+                _logger.LogInfo($"Company with id: {id} doesn't exist in the database.");
+                return NotFound();
+            }
+
+            var companyToPatch = _mapper.Map<CompanyForUpdateDto>(companyEntity);
+
+            patchDocument.ApplyTo(companyToPatch, ModelState);
+
+            TryValidateModel(companyToPatch);
+
+            if (!ModelState.IsValid)
+            {
+                _logger.LogError("Invalid model state for the patch document");
+
+                return UnprocessableEntity(ModelState);
+            }
+
+            _mapper.Map(companyToPatch, companyEntity);
+
             _repository.Save();
 
             return NoContent();
