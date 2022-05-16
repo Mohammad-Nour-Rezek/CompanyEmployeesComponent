@@ -1,6 +1,7 @@
 ﻿using Contracts;
 using Entities;
 using Entities.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,19 +17,20 @@ namespace Repository
 
         }
 
+        // can create duplicate functions here for async CreateAsync() and inside create AddAsync()
         public void CreateCompany(Company company) => 
             Create(company);
 
         public void DeleteCompany(Company company) =>
             Delete(company);
 
-        public IEnumerable<Company> GetAllCompanies(bool trackChanges) => 
-            FindAll(trackChanges).OrderBy(c => c.Name).ToList();
+        public async Task<IEnumerable<Company>> GetAllCompaniesAsync(bool trackChanges) => 
+            await FindAll(trackChanges).OrderBy(c => c.Name).ToListAsync();
 
-        public IEnumerable<Company> GetByIds(IEnumerable<Guid> ids, bool trackChanges) =>
-            FindByCondition(c => ids.Contains(c.Id), trackChanges).ToList();
+        public async Task<IEnumerable<Company>> GetByIdsAsync(IEnumerable<Guid> ids, bool trackChanges) =>
+            await FindByCondition(c => ids.Contains(c.Id), trackChanges).ToListAsync();
 
-        public Company GetCompany(Guid companyId, bool trackChanges) => 
-            FindByCondition(c => c.Id.Equals(companyId), trackChanges).SingleOrDefault();
+        public async Task<Company> GetCompanyAsync(Guid companyId, bool trackChanges) => 
+            await FindByCondition(c => c.Id.Equals(companyId), trackChanges).SingleOrDefaultAsync();
     }
 }

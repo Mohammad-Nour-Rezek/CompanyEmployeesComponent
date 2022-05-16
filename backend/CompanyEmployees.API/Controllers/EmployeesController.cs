@@ -28,9 +28,9 @@ namespace CompanyEmployees.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetEmployees(Guid companyId)
+        public async Task<IActionResult> GetEmployees(Guid companyId)
         {
-            var company = _repository.Company.GetCompany(companyId, trackChanges: false);
+            var company = await _repository.Company.GetCompanyAsync(companyId, trackChanges: false);
 
             if (company == null)
             {
@@ -40,7 +40,7 @@ namespace CompanyEmployees.API.Controllers
             }
             else
             {
-                var employees = _repository.Employee.GetAllEmployees(companyId, trackChanges: false);
+                var employees = await _repository.Employee.GetAllEmployeesAsync(companyId, trackChanges: false);
 
                 var employeesDto = _mapper.Map<IEnumerable<EmployeeDto>>(employees);
 
@@ -49,9 +49,9 @@ namespace CompanyEmployees.API.Controllers
         }
 
         [HttpGet("{id}", Name = "GetEmployeeForCompany")]
-        public IActionResult GetEmployee(Guid companyId, Guid id)
+        public async Task<IActionResult> GetEmployee(Guid companyId, Guid id)
         {
-            var company = _repository.Company.GetCompany(companyId, trackChanges: false);
+            var company = await _repository.Company.GetCompanyAsync(companyId, trackChanges: false);
 
             if (company == null)
             {
@@ -60,7 +60,7 @@ namespace CompanyEmployees.API.Controllers
                 return NotFound();
             }
 
-            var employee = _repository.Employee.GetEmployee(companyId, id, trackChanges: false);
+            var employee = await _repository.Employee.GetEmployeeAsync(companyId, id, trackChanges: false);
 
             if (employee == null)
             {
@@ -75,7 +75,7 @@ namespace CompanyEmployees.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateEmployeeForCompany(Guid companyId, [FromBody] EmployeeForCreationDto employee)
+        public async Task<IActionResult> CreateEmployeeForCompany(Guid companyId, [FromBody] EmployeeForCreationDto employee)
         {
             if (employee == null)
             {
@@ -92,7 +92,7 @@ namespace CompanyEmployees.API.Controllers
                 return UnprocessableEntity(ModelState);
             }
 
-            var company = _repository.Company.GetCompany(companyId, trackChanges: false);
+            var company = await _repository.Company.GetCompanyAsync(companyId, trackChanges: false);
 
             if (company == null)
             {
@@ -104,7 +104,7 @@ namespace CompanyEmployees.API.Controllers
             var employeeEntity = _mapper.Map<Employee>(employee);
 
             _repository.Employee.CreateEmployeeForCompany(companyId, employeeEntity);
-            _repository.Save();
+            await _repository.SaveAsync();
 
             var employeeToReturn = _mapper.Map<EmployeeDto>(employeeEntity);
 
@@ -112,9 +112,9 @@ namespace CompanyEmployees.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteEmployeeForCompany(Guid companyId, Guid id)
+        public async Task<IActionResult> DeleteEmployeeForCompany(Guid companyId, Guid id)
         {
-            var company = _repository.Company.GetCompany(companyId, trackChanges: false);
+            var company = await _repository.Company.GetCompanyAsync(companyId, trackChanges: false);
 
             if (company == null)
             {
@@ -123,7 +123,7 @@ namespace CompanyEmployees.API.Controllers
                 return NotFound();
             }
 
-            var employeeForCompany = _repository.Employee.GetEmployee(companyId, id, trackChanges: false);
+            var employeeForCompany = await _repository.Employee.GetEmployeeAsync(companyId, id, trackChanges: false);
 
             if (employeeForCompany == null)
             {
@@ -133,13 +133,13 @@ namespace CompanyEmployees.API.Controllers
             }
 
             _repository.Employee.DeleteEmployee(employeeForCompany);
-            _repository.Save();
+            await _repository.SaveAsync();
 
             return NoContent();
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateEmployee(Guid companyId, Guid id, [FromBody] EmployeeForUpdateDto employee)
+        public async Task<IActionResult> UpdateEmployee(Guid companyId, Guid id, [FromBody] EmployeeForUpdateDto employee)
         {
             if (employee == null)
             {
@@ -154,7 +154,7 @@ namespace CompanyEmployees.API.Controllers
                 return UnprocessableEntity(ModelState);
             }
 
-            var company = _repository.Company.GetCompany(companyId, trackChanges: false);
+            var company = await _repository.Company.GetCompanyAsync(companyId, trackChanges: false);
 
             if (company == null)
             {
@@ -163,7 +163,7 @@ namespace CompanyEmployees.API.Controllers
                 return NotFound();
             }
 
-            var employeeEntity = _repository.Employee.GetEmployee(companyId, id, trackChanges: true);
+            var employeeEntity = await _repository.Employee.GetEmployeeAsync(companyId, id, trackChanges: true);
 
             if (employeeEntity == null)
             {
@@ -173,13 +173,13 @@ namespace CompanyEmployees.API.Controllers
             }
 
             _mapper.Map(employee, employeeEntity);
-            _repository.Save();
+            await _repository.SaveAsync();
 
             return NoContent();
         }
 
         [HttpPatch("{id}")]
-        public IActionResult PatillyUpdateEmployeeForCompany(Guid companyId, Guid id, [FromBody] JsonPatchDocument<EmployeeForUpdateDto> patchDoc)
+        public async Task<IActionResult> PatillyUpdateEmployeeForCompany(Guid companyId, Guid id, [FromBody] JsonPatchDocument<EmployeeForUpdateDto> patchDoc)
         {
             if (patchDoc == null)
             {
@@ -188,7 +188,7 @@ namespace CompanyEmployees.API.Controllers
                 return BadRequest("patchDoc object is null");
             }
 
-            var company = _repository.Company.GetCompany(companyId, trackChanges: false);
+            var company = await _repository.Company.GetCompanyAsync(companyId, trackChanges: false);
 
             if (company == null)
             {
@@ -197,7 +197,7 @@ namespace CompanyEmployees.API.Controllers
                 return NotFound();
             }
 
-            var employeeEntity = _repository.Employee.GetEmployee(companyId, id, trackChanges: true);
+            var employeeEntity = await _repository.Employee.GetEmployeeAsync(companyId, id, trackChanges: true);
 
             if (employeeEntity == null)
             {
@@ -221,7 +221,7 @@ namespace CompanyEmployees.API.Controllers
 
             _mapper.Map(employeeToPatch, employeeEntity);
 
-            _repository.Save();
+            await _repository.SaveAsync();
 
             return NoContent();
         }
