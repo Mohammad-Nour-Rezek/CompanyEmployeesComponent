@@ -1,3 +1,4 @@
+using CompanyEmployees.API.ActionFilters;
 using CompanyEmployees.API.Extentions;
 using Contracts;
 using Microsoft.AspNetCore.Builder;
@@ -59,6 +60,8 @@ namespace CompanyEmployees.API
                     option.SuppressModelStateInvalidFilter = true; // to return 422 (Unprocessed Entity) insted of 400 (Bad Rquest) on invalid model state
                 }
             );
+
+            services.AddScoped<ValidationFilterAttribute>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
