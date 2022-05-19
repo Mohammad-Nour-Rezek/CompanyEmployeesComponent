@@ -12,27 +12,27 @@ namespace Repository
 {
     public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
-        protected RepositoryContext RepositoryContext;
+        protected RepositoryContext _RepositoryContext;
 
         public RepositoryBase(RepositoryContext repositoryContext)
         {
-            RepositoryContext = repositoryContext;
+            _RepositoryContext = repositoryContext;
         }
 
         // track changes for read-only queries
         public IQueryable<T> FindAll(bool trackChanges) => 
-            !trackChanges ? RepositoryContext.Set<T>().AsNoTracking() : RepositoryContext.Set<T>();
+            !trackChanges ? _RepositoryContext.Set<T>().AsNoTracking() : _RepositoryContext.Set<T>();
 
         public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression, bool trackChanges) => 
-            !trackChanges ? RepositoryContext.Set<T>().Where(expression).AsNoTracking() : RepositoryContext.Set<T>().Where(expression);
+            !trackChanges ? _RepositoryContext.Set<T>().Where(expression).AsNoTracking() : _RepositoryContext.Set<T>().Where(expression);
 
         public void Create(T entity) => 
-            RepositoryContext.Set<T>().Add(entity);
+            _RepositoryContext.Set<T>().Add(entity);
 
         public void Update(T entity) => 
-            RepositoryContext.Set<T>().Update(entity);
+            _RepositoryContext.Set<T>().Update(entity);
 
         public void Delete(T entity) => 
-            RepositoryContext.Set<T>().Remove(entity);
+            _RepositoryContext.Set<T>().Remove(entity);
     }
 }
