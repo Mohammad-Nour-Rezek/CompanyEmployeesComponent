@@ -50,25 +50,10 @@ namespace CompanyEmployees.API.Controllers
         }
 
         [HttpGet("{id}", Name = "GetEmployeeForCompany")]
-        public async Task<IActionResult> GetEmployee(Guid companyId, Guid id)
+        [ServiceFilter(typeof(ValidateEmployeeForCompanyExistsAttribute))]
+        public IActionResult GetEmployee(Guid companyId, Guid id)
         {
-            var company = await _repository.Company.GetCompanyAsync(companyId, trackChanges: false);
-
-            if (company == null)
-            {
-                _logger.LogInfo($"Company with id: {companyId} doesn't exist in the database.");
-
-                return NotFound();
-            }
-
-            var employee = await _repository.Employee.GetEmployeeAsync(companyId, id, trackChanges: false);
-
-            if (employee == null)
-            {
-                _logger.LogInfo($"Employee with id: {id} doesn't exist in the database.");
-
-                return NotFound();
-            }
+            var employee = HttpContext.Items["employee"] as Employee;
 
             var employeeDto = _mapper.Map<EmployeeDto>(employee);
 

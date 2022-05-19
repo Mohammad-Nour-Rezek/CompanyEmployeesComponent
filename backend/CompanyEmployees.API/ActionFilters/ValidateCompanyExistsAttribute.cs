@@ -19,7 +19,11 @@ namespace CompanyEmployees.API.ActionFilters
 
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
-            var trackChanges = context.HttpContext.Request.Method.Equals("PUT");
+            var method = context.HttpContext.Request.Method;
+
+            //var trackChanges = context.HttpContext.Request.Method.Equals("PUT");
+            var trackChanges = method is "PUT" or "PATCH";
+
             var id = (Guid)context.ActionArguments["id"];
 
             var company = await _repository.Company.GetCompanyAsync(id, trackChanges);

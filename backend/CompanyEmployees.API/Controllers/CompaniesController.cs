@@ -39,23 +39,55 @@ namespace CompanyEmployees.API.Controllers
             return Ok(companyDto);
         }
 
+        #region Test For Sync/Async
+        //[HttpGet("{id}", Name = "CompanyById")]
+        //public async Task<IActionResult> GetCompany(Guid id)
+        //{
+        //    var company = await _repository.Company.GetCompanyAsync(id, trackChanges: false);
+
+        //    if (company == null)
+        //    {
+        //        _logger.LogInfo($"Company with id: {id} doesn't exist in the database.");
+
+        //        return NotFound();
+        //    }
+
+        //    var companyDto = _mapper.Map<CompanyDto>(company);
+
+        //    return Ok(companyDto);
+
+        //}
+
+        //[HttpGet("{id}", Name = "CompanyById")]
+        //public IActionResult GetCompany(Guid id)
+        //{
+        //    var company = _repository.Company.GetCompany(id, trackChanges: false);
+
+        //    if (company == null)
+        //    {
+        //        _logger.LogInfo($"Company with id: {id} doesn't exist in the database.");
+
+        //        return NotFound();
+        //    }
+
+        //    var companyDto = _mapper.Map<CompanyDto>(company);
+
+        //    return Ok(companyDto);
+
+        //}
+
+        #endregion
+
         [HttpGet("{id}", Name = "CompanyById")]
-        public async Task<IActionResult> GetCompany(Guid id)
+        [ServiceFilter(typeof(ValidateCompanyExistsAttribute))]
+        public IActionResult GetCompany(Guid id)
         {
-            var company = await _repository.Company.GetCompanyAsync(id, trackChanges: false);
+            var company = HttpContext.Items["company"] as Company;
 
-            if (company == null)
-            {
-                _logger.LogInfo($"Company with id: {id} doesn't exist in the database.");
+            var companyDto = _mapper.Map<CompanyDto>(company);
 
-                return NotFound();
-            }
-            else
-            {
-                var companyDto = _mapper.Map<CompanyDto>(company);
+            return Ok(companyDto);
 
-                return Ok(companyDto);
-            }
         }
 
         [HttpGet("collection/({ids})", Name = "CompanyCollection")]
