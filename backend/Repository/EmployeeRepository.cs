@@ -3,6 +3,7 @@ using Entities;
 using Entities.Models;
 using Entities.RequestFeatures;
 using Microsoft.EntityFrameworkCore;
+using Repository.Extentions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,15 +29,18 @@ namespace Repository
 
         public async Task<PagedList<Employee>> GetEmployeesAsync(Guid companyId, EmployeeParameters employeeParameters, bool trackChanges)
         {
-            var employees = await FindByCondition(c => c.CompanyId.Equals(companyId) 
-                                                    && (c.Age >= employeeParameters.MinAge && c.Age <= employeeParameters.MaxAge), trackChanges)
-                                  .OrderBy(e => e.Name)
-                                  .Skip(count: (employeeParameters.PageNumber - 1) * employeeParameters.PageSize)
-                                  .Take(employeeParameters.PageSize)
-                                  .ToListAsync();
+            var employees = await FindByCondition(c => c.CompanyId.Equals(companyId), trackChanges)
+                                    .FilterEmployees(employeeParameters.MinAge, employeeParameters.MaxAge)
+                                    .Search(employeeParameters.SearchTerm)
+                                    .OrderBy(e => e.Name)
+                                    .Skip(count: (employeeParameters.PageNumber - 1) * employeeParameters.PageSize)
+                                    .Take(employeeParameters.PageSize)
+                                    .ToListAsync();
 
-            var count = await FindByCondition(c => c.CompanyId.Equals(companyId)
-                                                && (c.Age >= employeeParameters.MinAge && c.Age <= employeeParameters.MaxAge), trackChanges).CountAsync();
+            var count = await FindByCondition(c => c.CompanyId.Equals(companyId), trackChanges)
+                                .FilterEmployees(employeeParameters.MinAge, employeeParameters.MaxAge)
+                                .Search(employeeParameters.SearchTerm)
+                                .CountAsync();
 
             return PagedList<Employee>.ToPagedList(employees, employeeParameters.PageNumber, employeeParameters.PageSize, count);
 
