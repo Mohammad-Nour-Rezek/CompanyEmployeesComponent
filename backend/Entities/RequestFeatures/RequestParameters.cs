@@ -18,5 +18,7 @@ namespace Entities.RequestFeatures
             
             set => _pageSize = value > MAX_PAGE_SIZE ? MAX_PAGE_SIZE : value; 
         }
+
+        public string OrderBy { get; set; }
     }
 }
