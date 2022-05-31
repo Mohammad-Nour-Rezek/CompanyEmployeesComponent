@@ -55,7 +55,9 @@ namespace CompanyEmployees.API.Controllers
 
             var employeesDto = _mapper.Map<IEnumerable<EmployeeDto>>(employees);
 
-            return Ok(_dataShaper.ShapeData(employeesDto, employeeParameters.Fields));
+            var employeesFromDataShaper = _dataShaper.ShapeData(employeesDto, employeeParameters.Fields);
+
+            return Ok(employeesFromDataShaper);
             
         }
 
