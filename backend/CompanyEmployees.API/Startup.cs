@@ -1,5 +1,6 @@
 using CompanyEmployees.API.ActionFilters;
 using CompanyEmployees.API.Extentions;
+using CompanyEmployees.API.Utilities;
 using Contracts;
 using Entities.DataTransferObjects;
 using Microsoft.AspNetCore.Builder;
@@ -63,10 +64,16 @@ namespace CompanyEmployees.API
                 }
             );
 
+            services.AddCustomMediaTypes();
+
             services.AddScoped<ValidationFilterAttribute>();
             services.AddScoped<ValidateCompanyExistsAttribute>();
             services.AddScoped<ValidateEmployeeForCompanyExistsAttribute>();
+            services.AddScoped<ValidateMediaTypeAttribute>();
+
             services.AddScoped<IDataShaper<EmployeeDto>, DataShaper<EmployeeDto>>();
+
+            services.AddScoped<EmployeeLinks>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -82,7 +89,7 @@ namespace CompanyEmployees.API
                 app.UseHsts();
             }
 
-            app.ConfigureExceptionHandler(logger);
+            //app.ConfigureExceptionHandler(logger);
 
             app.UseHttpsRedirection();
 
