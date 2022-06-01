@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities.LinkModels;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -126,7 +127,7 @@ namespace Entities.Models
 
         public XmlSchema GetSchema()
         {
-            throw new NotImplementedException();
+            return new XmlSchema();
         }
 
         public void ReadXml(XmlReader reader)
@@ -160,21 +161,21 @@ namespace Entities.Models
         {
             writer.WriteStartElement(key);
 
-            //if (value.GetType() == typeof(List<Link>))
-            //{
-            //    foreach (var val in value as List<Link>)
-            //    {
-            //        writer.WriteStartElement(nameof(Link));
-            //        WriteXmlElement(nameof(val.Href), val.Href, writer);
-            //        WriteXmlElement(nameof(val.Method), val.Method, writer);
-            //        WriteXmlElement(nameof(val.Rel), val.Rel, writer);
-            //        writer.WriteEndElement();
-            //    }
-            //}
-            //else
-            //{
-            writer.WriteString(value.ToString());
-            //}
+            if (value.GetType() == typeof(List<Link>))
+            {
+                foreach (var val in value as List<Link>)
+                {
+                    writer.WriteStartElement(nameof(Link));
+                    WriteXmlElement(nameof(val.Href), val.Href, writer);
+                    WriteXmlElement(nameof(val.Method), val.Method, writer);
+                    WriteXmlElement(nameof(val.Rel), val.Rel, writer);
+                    writer.WriteEndElement();
+                }
+            }
+            else
+            {
+                writer.WriteString(value.ToString());
+            }
 
             writer.WriteEndElement();
         }
