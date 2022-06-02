@@ -29,6 +29,14 @@ namespace CompanyEmployees.API.Controllers
             _mapper = mapper;
         }
 
+        [HttpOptions]
+        public IActionResult GetCompaniesOption()
+        {
+            Response.Headers.Add("Allow", "GET, OPTIONS, POST");
+
+            return Ok();
+        }
+        
         [HttpGet]
         public async Task<IActionResult> GetCompanies()
         {
