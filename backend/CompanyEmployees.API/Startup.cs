@@ -40,6 +40,8 @@ namespace CompanyEmployees.API
 
             services.ConfigureIISIntegration();
 
+            services.ConfigureVersioning();
+
             services.ConfigureLoggerService();
 
             services.ConfigureSqlContext(Configuration);
