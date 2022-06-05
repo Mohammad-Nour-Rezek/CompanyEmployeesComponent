@@ -88,11 +88,15 @@ namespace CompanyEmployees.API.Extentions
                     opt.DefaultApiVersion = new ApiVersion(1, 0);
                     opt.ApiVersionReader = new HeaderApiVersionReader("api-version");
 
+                    #region Companies
                     // we can remove api version attribute
                     opt.Conventions.Controller<CompaniesController>().HasApiVersion(new ApiVersion(1, 0));
                     opt.Conventions.Controller<CompaniesV2Controller>().HasDeprecatedApiVersion(new ApiVersion(2, 0));
+                    #endregion
 
+                    #region Employees
                     opt.Conventions.Controller<EmployeesController>().HasApiVersion(new ApiVersion(1, 0));
+                    #endregion
                 });
         }
     }
