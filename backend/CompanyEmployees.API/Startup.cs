@@ -42,6 +42,10 @@ namespace CompanyEmployees.API
 
             services.ConfigureVersioning();
 
+            services.ConfigureResponseCaching();
+
+            services.ConfigureHttpCachHeaders();
+
             services.ConfigureLoggerService();
 
             services.ConfigureSqlContext(Configuration);
@@ -56,6 +60,7 @@ namespace CompanyEmployees.API
             {
                 config.RespectBrowserAcceptHeader = true; // to accept http Accept header
                 config.ReturnHttpNotAcceptable = true; // return 406 not accepted if media typa in accept not supported
+                config.CacheProfiles.Add("120SecondDuration", new CacheProfile { Duration = 120 }); // add to all actions in controller has the attribute
             }).AddNewtonsoftJson() // for use newton packages to use json patch doc
             .AddXmlDataContractSerializerFormatters() // to return serialized xml
             .AddCustomCSVFormatter();
@@ -66,7 +71,7 @@ namespace CompanyEmployees.API
                 }
             );
 
-            services.AddCustomMediaTypes();
+            services.AddCustomMediaTypes();            
 
             services.AddScoped<ValidationFilterAttribute>();
             services.AddScoped<ValidateCompanyExistsAttribute>();
@@ -91,7 +96,7 @@ namespace CompanyEmployees.API
                 app.UseHsts();
             }
 
-            //app.ConfigureExceptionHandler(logger);
+            //app.ConfigureExceptionHandler(logger);            
 
             app.UseHttpsRedirection();
 
@@ -103,6 +108,11 @@ namespace CompanyEmployees.API
 
             // will forward proxy headers to the current request. This will help us during application deployment.
             app.UseForwardedHeaders(new ForwardedHeadersOptions { ForwardedHeaders = ForwardedHeaders.All });
+
+            // add response caching to middleware pipline
+            app.UseResponseCaching();
+
+            app.UseHttpCacheHeaders();
 
             // UseRouting, UseAuthorization: add routing and authorization features to our application, respectively.
             app.UseRouting();

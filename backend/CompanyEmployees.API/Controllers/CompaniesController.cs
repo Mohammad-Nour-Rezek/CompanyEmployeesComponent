@@ -4,6 +4,7 @@ using CompanyEmployees.API.ModelBinders;
 using Contracts;
 using Entities.DataTransferObjects;
 using Entities.Models;
+using Marvin.Cache.Headers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -17,6 +18,7 @@ namespace CompanyEmployees.API.Controllers
     //[ApiVersion("1.0")]
     [Route("api/companies")]
     [ApiController]
+    [ResponseCache(CacheProfileName = "120SecondDuration")]
     public class CompaniesController : ControllerBase
     {
         private readonly ILoggerManager _logger;
@@ -89,11 +91,16 @@ namespace CompanyEmployees.API.Controllers
 
         [HttpGet("{id}", Name = "CompanyById")]
         [ServiceFilter(typeof(ValidateCompanyExistsAttribute))]
+        [ResponseCache(Duration = 60)]
+        [HttpCacheExpiration(CacheLocation = CacheLocation.Public, MaxAge = 30)]
+        [HttpCacheValidation(MustRevalidate = false)]
         public IActionResult GetCompany(Guid id)
         {
             var company = HttpContext.Items["company"] as Company;
 
             var companyDto = _mapper.Map<CompanyDto>(company);
+
+            _logger.LogInfo("Logging test for get company");
 
             return Ok(companyDto);
 
