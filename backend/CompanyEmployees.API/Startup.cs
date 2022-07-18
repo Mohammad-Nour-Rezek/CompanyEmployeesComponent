@@ -1,3 +1,4 @@
+using AspNetCoreRateLimit;
 using CompanyEmployees.API.ActionFilters;
 using CompanyEmployees.API.Extentions;
 using CompanyEmployees.API.Utilities;
@@ -38,7 +39,7 @@ namespace CompanyEmployees.API
         {
             services.ConfigureCors();
 
-            services.ConfigureIISIntegration();
+            services.ConfigureIISIntegration();            
 
             services.ConfigureVersioning();
 
@@ -81,6 +82,12 @@ namespace CompanyEmployees.API
             services.AddScoped<IDataShaper<EmployeeDto>, DataShaper<EmployeeDto>>();
 
             services.AddScoped<EmployeeLinks>();
+
+            services.AddMemoryCache(); // Rate Limiting need In-Memory Cach
+
+            services.ConfigureRateLimitingOptions(); // Rate Limit Config
+
+            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -113,6 +120,8 @@ namespace CompanyEmployees.API
             app.UseResponseCaching();
 
             app.UseHttpCacheHeaders();
+
+            app.UseIpRateLimiting();
 
             // UseRouting, UseAuthorization: add routing and authorization features to our application, respectively.
             app.UseRouting();

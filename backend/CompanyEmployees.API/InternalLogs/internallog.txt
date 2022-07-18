@@ -6851,3 +6851,1304 @@
 2022-06-19 03:16:56.4451 Debug Logger LoggerService.LoggerManager [Warn] => logconsole logfile
 2022-06-19 03:16:56.4451 Debug Logger LoggerService.LoggerManager [Error] => logconsole logfile
 2022-06-19 03:16:56.4451 Debug Logger LoggerService.LoggerManager [Fatal] => logconsole logfile
+2022-07-18 22:41:12.0658 Info Message Template Auto Format enabled
+2022-07-18 22:41:12.1581 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-07-18 22:41:12.3214 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2022-07-18 22:41:12.3214 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt'
+2022-07-18 22:41:12.3338 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:41:12.3338 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-07-18 22:41:12.3338 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2022-07-18 22:41:12.3338 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:41:12.3338 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:41:12.3338 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:41:12.3338 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:41:12.3338 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:41:12.3338 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:41:12.3338 Info Adding target FileTarget(Name=logfile)
+2022-07-18 22:41:12.3338 Debug Registered target logfile: NLog.Targets.FileTarget
+2022-07-18 22:41:12.3537 Debug Setting 'NLog.Targets.ColoredConsoleTarget.name' to 'logconsole'
+2022-07-18 22:41:12.3537 Debug Setting 'NLog.Targets.ColoredConsoleTarget.layout' to '${longdate} ${uppercase:${level}} ${message}'
+2022-07-18 22:41:12.3537 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:41:12.3537 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:41:12.3537 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.Inner' to '${level}'
+2022-07-18 22:41:12.3537 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:41:12.3537 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:41:12.3537 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:41:12.3537 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-07-18 22:41:12.3537 Trace  Scanning Property Inner '${level}' NLog.Layouts
+2022-07-18 22:41:12.3537 Trace  Scanning SimpleLayout '${level}'
+2022-07-18 22:41:12.3537 Trace   Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:41:12.3537 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:41:12.3537 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:41:12.3537 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:41:12.3628 Info Adding target ColoredConsoleTarget(Name=logconsole)
+2022-07-18 22:41:12.3628 Debug Registered target logconsole: NLog.Targets.ColoredConsoleTarget
+2022-07-18 22:41:12.3628 Trace ParseRulesElement
+2022-07-18 22:41:12.3806 Debug Watching file-filter 'nlog.config' in directory: F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API
+2022-07-18 22:41:12.3806 Debug --- NLog configuration dump ---
+2022-07-18 22:41:12.3806 Debug Targets:
+2022-07-18 22:41:12.3806 Debug FileTarget(Name=logfile)
+2022-07-18 22:41:12.3806 Debug ColoredConsoleTarget(Name=logconsole)
+2022-07-18 22:41:12.3806 Debug Rules:
+2022-07-18 22:41:12.3806 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ logconsole ]
+2022-07-18 22:41:12.3806 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2022-07-18 22:41:12.3806 Debug --- End of NLog configuration dump ---
+2022-07-18 22:41:12.3806 Trace FindReachableObject<System.Object>:
+2022-07-18 22:41:12.3806 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ logconsole ]'
+2022-07-18 22:41:12.3806 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-07-18 22:41:12.3806 Trace  Scanning ColoredConsoleTarget 'ColoredConsoleTarget(Name=logconsole)'
+2022-07-18 22:41:12.3806 Trace   Scanning Property Layout '${longdate} ${uppercase:${level}} ${message}' NLog.Layouts
+2022-07-18 22:41:12.3806 Trace   Scanning SimpleLayout '${longdate} ${uppercase:${level}} ${message}'
+2022-07-18 22:41:12.3806 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:41:12.3806 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:41:12.3806 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:41:12.3806 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-07-18 22:41:12.3806 Trace     Scanning Property Inner '${level}' NLog.Layouts
+2022-07-18 22:41:12.3806 Trace     Scanning SimpleLayout '${level}'
+2022-07-18 22:41:12.3806 Trace      Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:41:12.3806 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:41:12.3806 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:41:12.3806 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:41:12.3806 Trace   Scanning Property RowHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleRowHighlightingRule]' System.Collections.Generic
+2022-07-18 22:41:12.3806 Trace   Scanning Property WordHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleWordHighlightingRule]' System.Collections.Generic
+2022-07-18 22:41:12.3806 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-07-18 22:41:12.3948 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-07-18 22:41:12.3948 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2022-07-18 22:41:12.3948 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-07-18 22:41:12.3948 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-07-18 22:41:12.3948 Trace   Scanning Property FileName 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt' NLog.Layouts
+2022-07-18 22:41:12.3948 Trace   Scanning SimpleLayout 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt'
+2022-07-18 22:41:12.3948 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:41:12.3948 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:41:12.3948 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-07-18 22:41:12.3948 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:41:12.3948 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-07-18 22:41:12.3948 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-07-18 22:41:12.3948 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:41:12.3948 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:41:12.3948 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:41:12.3948 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:41:12.3948 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:41:12.3948 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:41:12.3948 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2022-07-18 22:41:12.3948 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-07-18 22:41:12.3948 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-07-18 22:41:12.3948 Info Validating config: TargetNames=logconsole, logfile, ConfigItems=22, FilePath=F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\nlog.config
+2022-07-18 22:41:12.3948 Debug Unused target checking is started... Rule Count: 2, Target Count: 2
+2022-07-18 22:41:12.4108 Debug Unused target checking is completed. Total Rule Count: 2, Total Target Count: 2, Unused Target Count: 0
+2022-07-18 22:41:12.4108 Trace Initializing Layout Renderer: ${message}
+2022-07-18 22:41:12.4108 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:41:12.4108 Trace Initializing Layout Renderer: ${level}
+2022-07-18 22:41:12.4108 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:41:12.4108 Trace Initializing Layout Renderer: ${longdate}
+2022-07-18 22:41:12.4108 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2022-07-18 22:41:12.4108 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:41:12.4108 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-07-18 22:41:12.4108 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:41:12.4108 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:41:12.4108 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:41:12.4108 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:41:12.4108 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:41:12.4108 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:41:12.4108 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:41:12.4108 Trace Initializing Layout Renderer: ${shortdate}
+2022-07-18 22:41:12.4108 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:41:12.4108 Trace Initializing F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt
+2022-07-18 22:41:12.4108 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:41:12.4255 Trace Scanning SimpleLayout 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt'
+2022-07-18 22:41:12.4255 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:41:12.4255 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:41:12.4255 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-07-18 22:41:12.4255 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:41:12.4255 Trace Initializing FileTarget(Name=logfile)
+2022-07-18 22:41:12.4255 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-07-18 22:41:12.4255 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-07-18 22:41:12.4255 Trace  Scanning Property FileName 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt' NLog.Layouts
+2022-07-18 22:41:12.4255 Trace  Scanning SimpleLayout 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt'
+2022-07-18 22:41:12.4255 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-07-18 22:41:12.4255 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-07-18 22:41:12.4255 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2022-07-18 22:41:12.4255 Trace FileTarget(Name=logfile) has 2 layouts
+2022-07-18 22:41:12.4255 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2022-07-18 22:41:12.4255 Trace Initializing Layout Renderer: ${message}
+2022-07-18 22:41:12.4255 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:41:12.4255 Trace Initializing Layout Renderer: ${level}
+2022-07-18 22:41:12.4415 Trace Initializing ${level}
+2022-07-18 22:41:12.4415 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:41:12.4415 Trace Scanning SimpleLayout '${level}'
+2022-07-18 22:41:12.4415 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:41:12.4415 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:41:12.4415 Trace Initializing Layout Renderer: ${uppercase}
+2022-07-18 22:41:12.4415 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:41:12.4415 Trace Initializing Layout Renderer: ${longdate}
+2022-07-18 22:41:12.4415 Trace Initializing ${longdate} ${uppercase:${level}} ${message}
+2022-07-18 22:41:12.4415 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:41:12.4415 Trace Scanning SimpleLayout '${longdate} ${uppercase:${level}} ${message}'
+2022-07-18 22:41:12.4415 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:41:12.4415 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:41:12.4415 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:41:12.4415 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-07-18 22:41:12.4415 Trace   Scanning Property Inner '${level}' NLog.Layouts
+2022-07-18 22:41:12.4415 Trace   Scanning SimpleLayout '${level}'
+2022-07-18 22:41:12.4415 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:41:12.4415 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:41:12.4415 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:41:12.4415 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:41:12.4415 Trace Initializing ColoredConsoleTarget(Name=logconsole)
+2022-07-18 22:41:12.4415 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-07-18 22:41:12.4415 Trace Scanning ColoredConsoleTarget 'ColoredConsoleTarget(Name=logconsole)'
+2022-07-18 22:41:12.4415 Trace  Scanning Property Layout '${longdate} ${uppercase:${level}} ${message}' NLog.Layouts
+2022-07-18 22:41:12.4415 Trace  Scanning SimpleLayout '${longdate} ${uppercase:${level}} ${message}'
+2022-07-18 22:41:12.4415 Trace  Scanning Property RowHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleRowHighlightingRule]' System.Collections.Generic
+2022-07-18 22:41:12.4415 Trace  Scanning Property WordHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleWordHighlightingRule]' System.Collections.Generic
+2022-07-18 22:41:12.4415 Trace ColoredConsoleTarget(Name=logconsole) has 1 layouts
+2022-07-18 22:41:13.9658 Debug ScanAssembly('NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-07-18 22:41:13.9658 Trace Assembly 'NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2022-07-18 22:41:14.0609 Debug Hide assemblies for callsite
+2022-07-18 22:41:14.0609 Debug ScanAssembly('NLog.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-07-18 22:41:14.0609 Trace Assembly 'NLog.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2022-07-18 22:41:14.0609 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2022-07-18 22:41:14.0609 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2022-07-18 22:41:14.0609 Debug Skip loading NLogLoggingConfiguration from empty config section: NLog
+2022-07-18 22:41:14.0674 Trace FindReachableObject<System.Object>:
+2022-07-18 22:41:14.0674 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ logconsole ]'
+2022-07-18 22:41:14.0674 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-07-18 22:41:14.0674 Trace  Scanning ColoredConsoleTarget 'ColoredConsoleTarget(Name=logconsole)'
+2022-07-18 22:41:14.0674 Trace   Scanning Property Layout '${longdate} ${uppercase:${level}} ${message}' NLog.Layouts
+2022-07-18 22:41:14.0674 Trace   Scanning SimpleLayout '${longdate} ${uppercase:${level}} ${message}'
+2022-07-18 22:41:14.0674 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:41:14.0674 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:41:14.0674 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:41:14.0674 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-07-18 22:41:14.0674 Trace     Scanning Property Inner '${level}' NLog.Layouts
+2022-07-18 22:41:14.0674 Trace     Scanning SimpleLayout '${level}'
+2022-07-18 22:41:14.0674 Trace      Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:41:14.0674 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:41:14.0674 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:41:14.0674 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:41:14.0674 Trace   Scanning Property RowHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleRowHighlightingRule]' System.Collections.Generic
+2022-07-18 22:41:14.0674 Trace   Scanning Property WordHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleWordHighlightingRule]' System.Collections.Generic
+2022-07-18 22:41:14.0674 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-07-18 22:41:14.0674 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-07-18 22:41:14.0674 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2022-07-18 22:41:14.0674 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-07-18 22:41:14.0674 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-07-18 22:41:14.0674 Trace   Scanning Property FileName 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt' NLog.Layouts
+2022-07-18 22:41:14.0674 Trace   Scanning SimpleLayout 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt'
+2022-07-18 22:41:14.0674 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:41:14.0674 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:41:14.0674 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-07-18 22:41:14.0674 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:41:14.0674 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-07-18 22:41:14.0674 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-07-18 22:41:14.0674 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:41:14.0674 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:41:14.0674 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:41:14.0674 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:41:14.0674 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:41:14.0674 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:41:14.0674 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2022-07-18 22:41:14.0674 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-07-18 22:41:14.0674 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-07-18 22:41:14.0674 Info Validating config: TargetNames=logconsole, logfile, ConfigItems=22, FilePath=F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\nlog.config
+2022-07-18 22:41:14.0674 Trace Initializing Layout Renderer: ${message}
+2022-07-18 22:41:14.0674 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:41:14.0674 Trace Initializing Layout Renderer: ${level}
+2022-07-18 22:41:14.0674 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:41:14.0674 Trace Initializing Layout Renderer: ${longdate}
+2022-07-18 22:41:14.0674 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2022-07-18 22:41:14.0674 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:41:14.0674 Trace Initializing Layout Renderer: ${shortdate}
+2022-07-18 22:41:14.0674 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:41:14.0674 Trace Initializing F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt
+2022-07-18 22:41:14.0674 Trace Initializing FileTarget(Name=logfile)
+2022-07-18 22:41:14.0674 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-07-18 22:41:14.0674 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-07-18 22:41:14.0674 Trace  Scanning Property FileName 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt' NLog.Layouts
+2022-07-18 22:41:14.0674 Trace  Scanning SimpleLayout 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt'
+2022-07-18 22:41:14.0674 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-07-18 22:41:14.0674 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-07-18 22:41:14.0674 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2022-07-18 22:41:14.0674 Trace FileTarget(Name=logfile) has 2 layouts
+2022-07-18 22:41:14.0817 Trace Initializing Layout Renderer: ${message}
+2022-07-18 22:41:14.0817 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:41:14.0817 Trace Initializing Layout Renderer: ${level}
+2022-07-18 22:41:14.0817 Trace Initializing ${level}
+2022-07-18 22:41:14.0817 Trace Initializing Layout Renderer: ${uppercase}
+2022-07-18 22:41:14.0817 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:41:14.0817 Trace Initializing Layout Renderer: ${longdate}
+2022-07-18 22:41:14.0817 Trace Initializing ${longdate} ${uppercase:${level}} ${message}
+2022-07-18 22:41:14.0817 Trace Initializing ColoredConsoleTarget(Name=logconsole)
+2022-07-18 22:41:14.0817 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-07-18 22:41:14.0817 Trace Scanning ColoredConsoleTarget 'ColoredConsoleTarget(Name=logconsole)'
+2022-07-18 22:41:14.0817 Trace  Scanning Property Layout '${longdate} ${uppercase:${level}} ${message}' NLog.Layouts
+2022-07-18 22:41:14.0817 Trace  Scanning SimpleLayout '${longdate} ${uppercase:${level}} ${message}'
+2022-07-18 22:41:14.0817 Trace  Scanning Property RowHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleRowHighlightingRule]' System.Collections.Generic
+2022-07-18 22:41:14.0817 Trace  Scanning Property WordHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleWordHighlightingRule]' System.Collections.Generic
+2022-07-18 22:41:14.0817 Trace ColoredConsoleTarget(Name=logconsole) has 1 layouts
+2022-07-18 22:41:14.1703 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2022-07-18 22:41:14.1703 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Trace] => logconsole
+2022-07-18 22:41:14.1703 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Debug] => logconsole logfile
+2022-07-18 22:41:14.1703 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Info] => logconsole logfile
+2022-07-18 22:41:14.1703 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Warn] => logconsole logfile
+2022-07-18 22:41:14.1703 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Error] => logconsole logfile
+2022-07-18 22:41:14.1703 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Fatal] => logconsole logfile
+2022-07-18 22:41:14.1804 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2022-07-18 22:41:14.1804 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Trace] => logconsole
+2022-07-18 22:41:14.1804 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Debug] => logconsole logfile
+2022-07-18 22:41:14.1804 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Info] => logconsole logfile
+2022-07-18 22:41:14.1804 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Warn] => logconsole logfile
+2022-07-18 22:41:14.1804 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Error] => logconsole logfile
+2022-07-18 22:41:14.1804 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Fatal] => logconsole logfile
+2022-07-18 22:41:14.1804 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Hosting.Lifetime
+2022-07-18 22:41:14.1804 Debug Logger Microsoft.Hosting.Lifetime [Trace] => logconsole
+2022-07-18 22:41:14.1804 Debug Logger Microsoft.Hosting.Lifetime [Debug] => logconsole logfile
+2022-07-18 22:41:14.1804 Debug Logger Microsoft.Hosting.Lifetime [Info] => logconsole logfile
+2022-07-18 22:41:14.1804 Debug Logger Microsoft.Hosting.Lifetime [Warn] => logconsole logfile
+2022-07-18 22:41:14.1804 Debug Logger Microsoft.Hosting.Lifetime [Error] => logconsole logfile
+2022-07-18 22:41:14.1804 Debug Logger Microsoft.Hosting.Lifetime [Fatal] => logconsole logfile
+2022-07-18 22:41:14.2218 Debug FileTarget(Name=logfile): Preparing for new file 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\2022-07-18_logfile.txt'
+2022-07-18 22:41:14.2300 Debug FileTarget(Name=logfile): Creating file appender: F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\2022-07-18_logfile.txt
+2022-07-18 22:41:14.2300 Trace FileTarget(Name=logfile): Opening F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\2022-07-18_logfile.txt with allowFileSharedWriting=False
+2022-07-18 22:41:14.2383 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer
+2022-07-18 22:41:14.2383 Debug Logger Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer [Trace] => logconsole
+2022-07-18 22:41:14.2383 Debug Logger Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer [Debug] => logconsole logfile
+2022-07-18 22:41:14.2383 Debug Logger Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer [Info] => logconsole logfile
+2022-07-18 22:41:14.2383 Debug Logger Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer [Warn] => logconsole logfile
+2022-07-18 22:41:14.2383 Debug Logger Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer [Error] => logconsole logfile
+2022-07-18 22:41:14.2383 Debug Logger Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer [Fatal] => logconsole logfile
+2022-07-18 22:41:14.2592 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy
+2022-07-18 22:41:14.2592 Debug Logger Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy [Trace] => logconsole
+2022-07-18 22:41:14.2592 Debug Logger Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy [Debug] => logconsole logfile
+2022-07-18 22:41:14.2592 Debug Logger Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy [Info] => logconsole logfile
+2022-07-18 22:41:14.2592 Debug Logger Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy [Warn] => logconsole logfile
+2022-07-18 22:41:14.2592 Debug Logger Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy [Error] => logconsole logfile
+2022-07-18 22:41:14.2592 Debug Logger Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy [Fatal] => logconsole logfile
+2022-07-18 22:41:14.3970 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.MvcOptions
+2022-07-18 22:41:14.3970 Debug Logger Microsoft.AspNetCore.Mvc.MvcOptions [Trace] => logconsole
+2022-07-18 22:41:14.3970 Debug Logger Microsoft.AspNetCore.Mvc.MvcOptions [Debug] => logconsole logfile
+2022-07-18 22:41:14.3970 Debug Logger Microsoft.AspNetCore.Mvc.MvcOptions [Info] => logconsole logfile
+2022-07-18 22:41:14.3970 Debug Logger Microsoft.AspNetCore.Mvc.MvcOptions [Warn] => logconsole logfile
+2022-07-18 22:41:14.3970 Debug Logger Microsoft.AspNetCore.Mvc.MvcOptions [Error] => logconsole logfile
+2022-07-18 22:41:14.3970 Debug Logger Microsoft.AspNetCore.Mvc.MvcOptions [Fatal] => logconsole logfile
+2022-07-18 22:41:14.3970 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2022-07-18 22:41:14.3970 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Trace] => logconsole
+2022-07-18 22:41:14.3970 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Debug] => logconsole logfile
+2022-07-18 22:41:14.3970 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Info] => logconsole logfile
+2022-07-18 22:41:14.3970 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Warn] => logconsole logfile
+2022-07-18 22:41:14.3970 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Error] => logconsole logfile
+2022-07-18 22:41:14.3970 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Fatal] => logconsole logfile
+2022-07-18 22:41:14.6080 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter
+2022-07-18 22:41:14.6080 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Trace] => logconsole
+2022-07-18 22:41:14.6080 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Debug] => logconsole logfile
+2022-07-18 22:41:14.6080 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Info] => logconsole logfile
+2022-07-18 22:41:14.6080 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Warn] => logconsole logfile
+2022-07-18 22:41:14.6080 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Error] => logconsole logfile
+2022-07-18 22:41:14.6080 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Fatal] => logconsole logfile
+2022-07-18 22:41:15.1774 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2022-07-18 22:41:15.1774 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Trace] => logconsole
+2022-07-18 22:41:15.1774 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Debug] => logconsole logfile
+2022-07-18 22:41:15.1774 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Info] => logconsole logfile
+2022-07-18 22:41:15.1774 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Warn] => logconsole logfile
+2022-07-18 22:41:15.1774 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Error] => logconsole logfile
+2022-07-18 22:41:15.1774 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Fatal] => logconsole logfile
+2022-07-18 22:41:15.1774 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2022-07-18 22:41:15.1774 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Trace] => logconsole
+2022-07-18 22:41:15.1774 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Debug] => logconsole logfile
+2022-07-18 22:41:15.1774 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Info] => logconsole logfile
+2022-07-18 22:41:15.1774 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Warn] => logconsole logfile
+2022-07-18 22:41:15.1774 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Error] => logconsole logfile
+2022-07-18 22:41:15.1774 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Fatal] => logconsole logfile
+2022-07-18 22:41:15.2121 Info Shutdown() called. Logger closing...
+2022-07-18 22:41:15.2121 Info Closing old configuration.
+2022-07-18 22:41:15.2121 Debug LogFactory Flush with timeout=15 secs
+2022-07-18 22:41:15.2121 Trace Flushing all 2 targets...
+2022-07-18 22:41:15.2121 Trace ForEachItemInParallel() 2 items
+2022-07-18 22:41:15.2121 Trace Continuation invoked: 
+2022-07-18 22:41:15.2121 Trace Parallel task completed. 1 items remaining
+2022-07-18 22:41:15.2121 Trace FileTarget(Name=logfile): FlushAsync
+2022-07-18 22:41:15.2233 Trace Continuation invoked: 
+2022-07-18 22:41:15.2233 Trace Parallel task completed. 0 items remaining
+2022-07-18 22:41:15.2233 Debug Flush completed
+2022-07-18 22:41:15.2233 Trace FileTarget(Name=logfile): FlushAsync Done
+2022-07-18 22:41:15.2233 Debug Closing logging configuration...
+2022-07-18 22:41:15.2233 Trace Closing ColoredConsoleTarget(Name=logconsole)
+2022-07-18 22:41:15.2233 Debug ColoredConsoleTarget(Name=logconsole): Closing...
+2022-07-18 22:41:15.2233 Debug ColoredConsoleTarget(Name=logconsole): Closed.
+2022-07-18 22:41:15.2233 Trace Closing ${longdate} ${uppercase:${level}} ${message}
+2022-07-18 22:41:15.2233 Trace Closing Layout Renderer: ${longdate}
+2022-07-18 22:41:15.2233 Trace Closing Layout Renderer: ${literal}
+2022-07-18 22:41:15.2233 Trace Closing Layout Renderer: ${uppercase}
+2022-07-18 22:41:15.2233 Trace Closing ${level}
+2022-07-18 22:41:15.2233 Trace Closing Layout Renderer: ${level}
+2022-07-18 22:41:15.2233 Trace Closing Layout Renderer: ${literal}
+2022-07-18 22:41:15.2233 Trace Closing Layout Renderer: ${message}
+2022-07-18 22:41:15.2233 Trace Closing FileTarget(Name=logfile)
+2022-07-18 22:41:15.2233 Debug FileTarget(Name=logfile): Closing...
+2022-07-18 22:41:15.2233 Trace FileTarget(Name=logfile): FinalizeFile 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\2022-07-18_logfile.txt, isArchiving: False'
+2022-07-18 22:41:15.2233 Debug FileTarget(Name=logfile): FileAppender Closing Invalidate - F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\2022-07-18_logfile.txt
+2022-07-18 22:41:15.2233 Trace FileTarget: Closing 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\2022-07-18_logfile.txt'
+2022-07-18 22:41:15.2397 Debug FileTarget(Name=logfile): Closed.
+2022-07-18 22:41:15.2397 Trace Closing F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt
+2022-07-18 22:41:15.2397 Trace Closing Layout Renderer: ${literal}
+2022-07-18 22:41:15.2397 Trace Closing Layout Renderer: ${shortdate}
+2022-07-18 22:41:15.2397 Trace Closing Layout Renderer: ${literal}
+2022-07-18 22:41:15.2397 Trace Closing ${longdate} ${level:uppercase=true} ${message}
+2022-07-18 22:41:15.2397 Trace Closing Layout Renderer: ${longdate}
+2022-07-18 22:41:15.2397 Trace Closing Layout Renderer: ${literal}
+2022-07-18 22:41:15.2397 Trace Closing Layout Renderer: ${level}
+2022-07-18 22:41:15.2397 Trace Closing Layout Renderer: ${literal}
+2022-07-18 22:41:15.2397 Trace Closing Layout Renderer: ${message}
+2022-07-18 22:41:15.2397 Debug Finished closing logging configuration.
+2022-07-18 22:41:15.2397 Debug Stopping file watching for path 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API' filter 'nlog.config'
+2022-07-18 22:41:15.2397 Debug Targets not configured for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2022-07-18 22:41:15.2397 Debug Targets not configured for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2022-07-18 22:41:15.2397 Debug Targets not configured for Logger: Microsoft.Hosting.Lifetime
+2022-07-18 22:41:15.2397 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer
+2022-07-18 22:41:15.2397 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy
+2022-07-18 22:41:15.2397 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.MvcOptions
+2022-07-18 22:41:15.2397 Debug Targets not configured for Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2022-07-18 22:41:15.2397 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter
+2022-07-18 22:41:15.2397 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter
+2022-07-18 22:41:15.2397 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter
+2022-07-18 22:41:15.2397 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter
+2022-07-18 22:41:15.2397 Debug Targets not configured for Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2022-07-18 22:41:15.2397 Debug Targets not configured for Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2022-07-18 22:41:15.2397 Info Logger has been closed down.
+2022-07-18 22:45:16.9235 Info Message Template Auto Format enabled
+2022-07-18 22:45:16.9742 Debug ScanAssembly('NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-07-18 22:45:17.0647 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2022-07-18 22:45:17.0739 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt'
+2022-07-18 22:45:17.0739 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:45:17.0849 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-07-18 22:45:17.0849 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2022-07-18 22:45:17.0849 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:45:17.0849 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:45:17.0849 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:45:17.0849 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:45:17.0849 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:45:17.0849 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:45:17.0849 Info Adding target FileTarget(Name=logfile)
+2022-07-18 22:45:17.0975 Debug Registered target logfile: NLog.Targets.FileTarget
+2022-07-18 22:45:17.0975 Debug Setting 'NLog.Targets.ColoredConsoleTarget.name' to 'logconsole'
+2022-07-18 22:45:17.0975 Debug Setting 'NLog.Targets.ColoredConsoleTarget.layout' to '${longdate} ${uppercase:${level}} ${message}'
+2022-07-18 22:45:17.0975 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:45:17.0975 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:45:17.0975 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.Inner' to '${level}'
+2022-07-18 22:45:17.0975 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:45:17.0975 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:45:17.0975 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:45:17.0975 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-07-18 22:45:17.0975 Trace  Scanning Property Inner '${level}' NLog.Layouts
+2022-07-18 22:45:17.0975 Trace  Scanning SimpleLayout '${level}'
+2022-07-18 22:45:17.1140 Trace   Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:45:17.1140 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:45:17.1140 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:45:17.1140 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:45:17.1140 Info Adding target ColoredConsoleTarget(Name=logconsole)
+2022-07-18 22:45:17.1140 Debug Registered target logconsole: NLog.Targets.ColoredConsoleTarget
+2022-07-18 22:45:17.1140 Trace ParseRulesElement
+2022-07-18 22:45:17.1352 Debug Watching file-filter 'nlog.config' in directory: F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API
+2022-07-18 22:45:17.1352 Debug --- NLog configuration dump ---
+2022-07-18 22:45:17.1352 Debug Targets:
+2022-07-18 22:45:17.1352 Debug FileTarget(Name=logfile)
+2022-07-18 22:45:17.1352 Debug ColoredConsoleTarget(Name=logconsole)
+2022-07-18 22:45:17.1352 Debug Rules:
+2022-07-18 22:45:17.1352 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ logconsole ]
+2022-07-18 22:45:17.1352 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2022-07-18 22:45:17.1352 Debug --- End of NLog configuration dump ---
+2022-07-18 22:45:17.1455 Trace FindReachableObject<System.Object>:
+2022-07-18 22:45:17.1455 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ logconsole ]'
+2022-07-18 22:45:17.1455 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-07-18 22:45:17.1455 Trace  Scanning ColoredConsoleTarget 'ColoredConsoleTarget(Name=logconsole)'
+2022-07-18 22:45:17.1455 Trace   Scanning Property Layout '${longdate} ${uppercase:${level}} ${message}' NLog.Layouts
+2022-07-18 22:45:17.1455 Trace   Scanning SimpleLayout '${longdate} ${uppercase:${level}} ${message}'
+2022-07-18 22:45:17.1455 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:45:17.1455 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:45:17.1455 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:45:17.1455 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-07-18 22:45:17.1455 Trace     Scanning Property Inner '${level}' NLog.Layouts
+2022-07-18 22:45:17.1455 Trace     Scanning SimpleLayout '${level}'
+2022-07-18 22:45:17.1455 Trace      Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:45:17.1455 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:45:17.1455 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:45:17.1455 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:45:17.1455 Trace   Scanning Property RowHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleRowHighlightingRule]' System.Collections.Generic
+2022-07-18 22:45:17.1455 Trace   Scanning Property WordHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleWordHighlightingRule]' System.Collections.Generic
+2022-07-18 22:45:17.1455 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-07-18 22:45:17.1455 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-07-18 22:45:17.1455 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2022-07-18 22:45:17.1455 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-07-18 22:45:17.1455 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-07-18 22:45:17.1455 Trace   Scanning Property FileName 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt' NLog.Layouts
+2022-07-18 22:45:17.1455 Trace   Scanning SimpleLayout 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt'
+2022-07-18 22:45:17.1455 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:45:17.1455 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:45:17.1455 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-07-18 22:45:17.1455 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:45:17.1455 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-07-18 22:45:17.1455 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-07-18 22:45:17.1455 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:45:17.1455 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:45:17.1455 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:45:17.1455 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:45:17.1455 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:45:17.1455 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:45:17.1455 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2022-07-18 22:45:17.1455 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-07-18 22:45:17.1455 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-07-18 22:45:17.1455 Info Validating config: TargetNames=logconsole, logfile, ConfigItems=22, FilePath=F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\nlog.config
+2022-07-18 22:45:17.1612 Debug Unused target checking is started... Rule Count: 2, Target Count: 2
+2022-07-18 22:45:17.1612 Debug Unused target checking is completed. Total Rule Count: 2, Total Target Count: 2, Unused Target Count: 0
+2022-07-18 22:45:17.1612 Trace Initializing Layout Renderer: ${message}
+2022-07-18 22:45:17.1612 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:45:17.1612 Trace Initializing Layout Renderer: ${level}
+2022-07-18 22:45:17.1612 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:45:17.1612 Trace Initializing Layout Renderer: ${longdate}
+2022-07-18 22:45:17.1612 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2022-07-18 22:45:17.1612 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:45:17.1612 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-07-18 22:45:17.1612 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:45:17.1612 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:45:17.1612 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:45:17.1612 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:45:17.1750 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:45:17.1750 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:45:17.1750 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:45:17.1750 Trace Initializing Layout Renderer: ${shortdate}
+2022-07-18 22:45:17.1750 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:45:17.1750 Trace Initializing F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt
+2022-07-18 22:45:17.1750 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:45:17.1750 Trace Scanning SimpleLayout 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt'
+2022-07-18 22:45:17.1750 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:45:17.1750 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:45:17.1750 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-07-18 22:45:17.1750 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:45:17.1750 Trace Initializing FileTarget(Name=logfile)
+2022-07-18 22:45:17.1750 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-07-18 22:45:17.1750 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-07-18 22:45:17.1750 Trace  Scanning Property FileName 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt' NLog.Layouts
+2022-07-18 22:45:17.1750 Trace  Scanning SimpleLayout 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt'
+2022-07-18 22:45:17.1750 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-07-18 22:45:17.1750 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-07-18 22:45:17.1750 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2022-07-18 22:45:17.1750 Trace FileTarget(Name=logfile) has 2 layouts
+2022-07-18 22:45:17.1750 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2022-07-18 22:45:17.1750 Trace Initializing Layout Renderer: ${message}
+2022-07-18 22:45:17.1750 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:45:17.1750 Trace Initializing Layout Renderer: ${level}
+2022-07-18 22:45:17.1750 Trace Initializing ${level}
+2022-07-18 22:45:17.1750 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:45:17.1750 Trace Scanning SimpleLayout '${level}'
+2022-07-18 22:45:17.1750 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:45:17.1750 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:45:17.1750 Trace Initializing Layout Renderer: ${uppercase}
+2022-07-18 22:45:17.1750 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:45:17.1750 Trace Initializing Layout Renderer: ${longdate}
+2022-07-18 22:45:17.1750 Trace Initializing ${longdate} ${uppercase:${level}} ${message}
+2022-07-18 22:45:17.1750 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:45:17.1750 Trace Scanning SimpleLayout '${longdate} ${uppercase:${level}} ${message}'
+2022-07-18 22:45:17.1750 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:45:17.1750 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:45:17.1750 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:45:17.1750 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-07-18 22:45:17.1750 Trace   Scanning Property Inner '${level}' NLog.Layouts
+2022-07-18 22:45:17.1750 Trace   Scanning SimpleLayout '${level}'
+2022-07-18 22:45:17.1750 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:45:17.1750 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:45:17.1912 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:45:17.1912 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:45:17.1912 Trace Initializing ColoredConsoleTarget(Name=logconsole)
+2022-07-18 22:45:17.1912 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-07-18 22:45:17.1912 Trace Scanning ColoredConsoleTarget 'ColoredConsoleTarget(Name=logconsole)'
+2022-07-18 22:45:17.1912 Trace  Scanning Property Layout '${longdate} ${uppercase:${level}} ${message}' NLog.Layouts
+2022-07-18 22:45:17.1912 Trace  Scanning SimpleLayout '${longdate} ${uppercase:${level}} ${message}'
+2022-07-18 22:45:17.1912 Trace  Scanning Property RowHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleRowHighlightingRule]' System.Collections.Generic
+2022-07-18 22:45:17.1912 Trace  Scanning Property WordHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleWordHighlightingRule]' System.Collections.Generic
+2022-07-18 22:45:17.1912 Trace ColoredConsoleTarget(Name=logconsole) has 1 layouts
+2022-07-18 22:45:17.4272 Debug ScanAssembly('NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-07-18 22:45:17.4272 Trace Assembly 'NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2022-07-18 22:45:17.4987 Debug Hide assemblies for callsite
+2022-07-18 22:45:17.4987 Debug ScanAssembly('NLog.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-07-18 22:45:17.4987 Trace Assembly 'NLog.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2022-07-18 22:45:17.4987 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2022-07-18 22:45:17.4987 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2022-07-18 22:45:17.5050 Debug Skip loading NLogLoggingConfiguration from empty config section: NLog
+2022-07-18 22:45:17.5050 Trace FindReachableObject<System.Object>:
+2022-07-18 22:45:17.5050 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ logconsole ]'
+2022-07-18 22:45:17.5050 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-07-18 22:45:17.5050 Trace  Scanning ColoredConsoleTarget 'ColoredConsoleTarget(Name=logconsole)'
+2022-07-18 22:45:17.5050 Trace   Scanning Property Layout '${longdate} ${uppercase:${level}} ${message}' NLog.Layouts
+2022-07-18 22:45:17.5050 Trace   Scanning SimpleLayout '${longdate} ${uppercase:${level}} ${message}'
+2022-07-18 22:45:17.5050 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:45:17.5050 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:45:17.5050 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:45:17.5050 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-07-18 22:45:17.5050 Trace     Scanning Property Inner '${level}' NLog.Layouts
+2022-07-18 22:45:17.5050 Trace     Scanning SimpleLayout '${level}'
+2022-07-18 22:45:17.5050 Trace      Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:45:17.5050 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:45:17.5050 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:45:17.5050 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:45:17.5050 Trace   Scanning Property RowHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleRowHighlightingRule]' System.Collections.Generic
+2022-07-18 22:45:17.5050 Trace   Scanning Property WordHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleWordHighlightingRule]' System.Collections.Generic
+2022-07-18 22:45:17.5050 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-07-18 22:45:17.5050 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-07-18 22:45:17.5050 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2022-07-18 22:45:17.5050 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-07-18 22:45:17.5050 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-07-18 22:45:17.5050 Trace   Scanning Property FileName 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt' NLog.Layouts
+2022-07-18 22:45:17.5050 Trace   Scanning SimpleLayout 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt'
+2022-07-18 22:45:17.5050 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:45:17.5050 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:45:17.5050 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-07-18 22:45:17.5050 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:45:17.5050 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-07-18 22:45:17.5050 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-07-18 22:45:17.5050 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:45:17.5050 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:45:17.5050 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:45:17.5050 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:45:17.5050 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:45:17.5050 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:45:17.5050 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2022-07-18 22:45:17.5050 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-07-18 22:45:17.5050 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-07-18 22:45:17.5050 Info Validating config: TargetNames=logconsole, logfile, ConfigItems=22, FilePath=F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\nlog.config
+2022-07-18 22:45:17.5050 Trace Initializing Layout Renderer: ${message}
+2022-07-18 22:45:17.5050 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:45:17.5050 Trace Initializing Layout Renderer: ${level}
+2022-07-18 22:45:17.5050 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:45:17.5050 Trace Initializing Layout Renderer: ${longdate}
+2022-07-18 22:45:17.5050 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2022-07-18 22:45:17.5050 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:45:17.5050 Trace Initializing Layout Renderer: ${shortdate}
+2022-07-18 22:45:17.5050 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:45:17.5050 Trace Initializing F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt
+2022-07-18 22:45:17.5050 Trace Initializing FileTarget(Name=logfile)
+2022-07-18 22:45:17.5050 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-07-18 22:45:17.5050 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-07-18 22:45:17.5050 Trace  Scanning Property FileName 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt' NLog.Layouts
+2022-07-18 22:45:17.5050 Trace  Scanning SimpleLayout 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt'
+2022-07-18 22:45:17.5050 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-07-18 22:45:17.5050 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-07-18 22:45:17.5050 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2022-07-18 22:45:17.5050 Trace FileTarget(Name=logfile) has 2 layouts
+2022-07-18 22:45:17.5050 Trace Initializing Layout Renderer: ${message}
+2022-07-18 22:45:17.5050 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:45:17.5050 Trace Initializing Layout Renderer: ${level}
+2022-07-18 22:45:17.5050 Trace Initializing ${level}
+2022-07-18 22:45:17.5198 Trace Initializing Layout Renderer: ${uppercase}
+2022-07-18 22:45:17.5198 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:45:17.5198 Trace Initializing Layout Renderer: ${longdate}
+2022-07-18 22:45:17.5198 Trace Initializing ${longdate} ${uppercase:${level}} ${message}
+2022-07-18 22:45:17.5198 Trace Initializing ColoredConsoleTarget(Name=logconsole)
+2022-07-18 22:45:17.5198 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-07-18 22:45:17.5198 Trace Scanning ColoredConsoleTarget 'ColoredConsoleTarget(Name=logconsole)'
+2022-07-18 22:45:17.5198 Trace  Scanning Property Layout '${longdate} ${uppercase:${level}} ${message}' NLog.Layouts
+2022-07-18 22:45:17.5198 Trace  Scanning SimpleLayout '${longdate} ${uppercase:${level}} ${message}'
+2022-07-18 22:45:17.5198 Trace  Scanning Property RowHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleRowHighlightingRule]' System.Collections.Generic
+2022-07-18 22:45:17.5198 Trace  Scanning Property WordHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleWordHighlightingRule]' System.Collections.Generic
+2022-07-18 22:45:17.5198 Trace ColoredConsoleTarget(Name=logconsole) has 1 layouts
+2022-07-18 22:45:17.5448 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2022-07-18 22:45:17.5448 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Trace] => logconsole
+2022-07-18 22:45:17.5448 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Debug] => logconsole logfile
+2022-07-18 22:45:17.5448 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Info] => logconsole logfile
+2022-07-18 22:45:17.5448 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Warn] => logconsole logfile
+2022-07-18 22:45:17.5448 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Error] => logconsole logfile
+2022-07-18 22:45:17.5448 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Fatal] => logconsole logfile
+2022-07-18 22:45:17.5540 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2022-07-18 22:45:17.5540 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Trace] => logconsole
+2022-07-18 22:45:17.5540 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Debug] => logconsole logfile
+2022-07-18 22:45:17.5540 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Info] => logconsole logfile
+2022-07-18 22:45:17.5540 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Warn] => logconsole logfile
+2022-07-18 22:45:17.5540 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Error] => logconsole logfile
+2022-07-18 22:45:17.5540 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Fatal] => logconsole logfile
+2022-07-18 22:45:17.5540 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Hosting.Lifetime
+2022-07-18 22:45:17.5540 Debug Logger Microsoft.Hosting.Lifetime [Trace] => logconsole
+2022-07-18 22:45:17.5540 Debug Logger Microsoft.Hosting.Lifetime [Debug] => logconsole logfile
+2022-07-18 22:45:17.5540 Debug Logger Microsoft.Hosting.Lifetime [Info] => logconsole logfile
+2022-07-18 22:45:17.5540 Debug Logger Microsoft.Hosting.Lifetime [Warn] => logconsole logfile
+2022-07-18 22:45:17.5540 Debug Logger Microsoft.Hosting.Lifetime [Error] => logconsole logfile
+2022-07-18 22:45:17.5540 Debug Logger Microsoft.Hosting.Lifetime [Fatal] => logconsole logfile
+2022-07-18 22:45:17.5950 Debug FileTarget(Name=logfile): Preparing for new file 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\2022-07-18_logfile.txt'
+2022-07-18 22:45:17.6021 Debug FileTarget(Name=logfile): Creating file appender: F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\2022-07-18_logfile.txt
+2022-07-18 22:45:17.6021 Trace FileTarget(Name=logfile): Opening F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\2022-07-18_logfile.txt with allowFileSharedWriting=False
+2022-07-18 22:45:17.6021 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer
+2022-07-18 22:45:17.6021 Debug Logger Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer [Trace] => logconsole
+2022-07-18 22:45:17.6021 Debug Logger Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer [Debug] => logconsole logfile
+2022-07-18 22:45:17.6021 Debug Logger Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer [Info] => logconsole logfile
+2022-07-18 22:45:17.6021 Debug Logger Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer [Warn] => logconsole logfile
+2022-07-18 22:45:17.6021 Debug Logger Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer [Error] => logconsole logfile
+2022-07-18 22:45:17.6130 Debug Logger Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer [Fatal] => logconsole logfile
+2022-07-18 22:45:17.6292 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy
+2022-07-18 22:45:17.6292 Debug Logger Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy [Trace] => logconsole
+2022-07-18 22:45:17.6292 Debug Logger Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy [Debug] => logconsole logfile
+2022-07-18 22:45:17.6292 Debug Logger Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy [Info] => logconsole logfile
+2022-07-18 22:45:17.6292 Debug Logger Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy [Warn] => logconsole logfile
+2022-07-18 22:45:17.6292 Debug Logger Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy [Error] => logconsole logfile
+2022-07-18 22:45:17.6292 Debug Logger Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy [Fatal] => logconsole logfile
+2022-07-18 22:45:17.6507 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.MvcOptions
+2022-07-18 22:45:17.6507 Debug Logger Microsoft.AspNetCore.Mvc.MvcOptions [Trace] => logconsole
+2022-07-18 22:45:17.6507 Debug Logger Microsoft.AspNetCore.Mvc.MvcOptions [Debug] => logconsole logfile
+2022-07-18 22:45:17.6507 Debug Logger Microsoft.AspNetCore.Mvc.MvcOptions [Info] => logconsole logfile
+2022-07-18 22:45:17.6507 Debug Logger Microsoft.AspNetCore.Mvc.MvcOptions [Warn] => logconsole logfile
+2022-07-18 22:45:17.6507 Debug Logger Microsoft.AspNetCore.Mvc.MvcOptions [Error] => logconsole logfile
+2022-07-18 22:45:17.6507 Debug Logger Microsoft.AspNetCore.Mvc.MvcOptions [Fatal] => logconsole logfile
+2022-07-18 22:45:17.6507 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2022-07-18 22:45:17.6507 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Trace] => logconsole
+2022-07-18 22:45:17.6507 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Debug] => logconsole logfile
+2022-07-18 22:45:17.6507 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Info] => logconsole logfile
+2022-07-18 22:45:17.6507 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Warn] => logconsole logfile
+2022-07-18 22:45:17.6507 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Error] => logconsole logfile
+2022-07-18 22:45:17.6507 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Fatal] => logconsole logfile
+2022-07-18 22:45:17.7557 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter
+2022-07-18 22:45:17.7557 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Trace] => logconsole
+2022-07-18 22:45:17.7557 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Debug] => logconsole logfile
+2022-07-18 22:45:17.7557 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Info] => logconsole logfile
+2022-07-18 22:45:17.7557 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Warn] => logconsole logfile
+2022-07-18 22:45:17.7557 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Error] => logconsole logfile
+2022-07-18 22:45:17.7557 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Fatal] => logconsole logfile
+2022-07-18 22:45:17.8177 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter
+2022-07-18 22:45:17.8177 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter [Trace] => logconsole
+2022-07-18 22:45:17.8177 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter [Debug] => logconsole logfile
+2022-07-18 22:45:17.8177 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter [Info] => logconsole logfile
+2022-07-18 22:45:17.8177 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter [Warn] => logconsole logfile
+2022-07-18 22:45:17.8177 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter [Error] => logconsole logfile
+2022-07-18 22:45:17.8177 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter [Fatal] => logconsole logfile
+2022-07-18 22:45:17.8177 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter
+2022-07-18 22:45:17.8177 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter [Trace] => logconsole
+2022-07-18 22:45:17.8177 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter [Debug] => logconsole logfile
+2022-07-18 22:45:17.8177 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter [Info] => logconsole logfile
+2022-07-18 22:45:17.8177 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter [Warn] => logconsole logfile
+2022-07-18 22:45:17.8177 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter [Error] => logconsole logfile
+2022-07-18 22:45:17.8177 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter [Fatal] => logconsole logfile
+2022-07-18 22:45:17.8418 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter
+2022-07-18 22:45:17.8418 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter [Trace] => logconsole
+2022-07-18 22:45:17.8418 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter [Debug] => logconsole logfile
+2022-07-18 22:45:17.8418 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter [Info] => logconsole logfile
+2022-07-18 22:45:17.8418 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter [Warn] => logconsole logfile
+2022-07-18 22:45:17.8418 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter [Error] => logconsole logfile
+2022-07-18 22:45:17.8418 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter [Fatal] => logconsole logfile
+2022-07-18 22:45:17.9670 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2022-07-18 22:45:17.9670 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Trace] => logconsole
+2022-07-18 22:45:17.9670 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Debug] => logconsole logfile
+2022-07-18 22:45:17.9670 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Info] => logconsole logfile
+2022-07-18 22:45:17.9670 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Warn] => logconsole logfile
+2022-07-18 22:45:17.9670 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Error] => logconsole logfile
+2022-07-18 22:45:17.9670 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Fatal] => logconsole logfile
+2022-07-18 22:45:17.9746 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2022-07-18 22:45:17.9746 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Trace] => logconsole
+2022-07-18 22:45:17.9746 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Debug] => logconsole logfile
+2022-07-18 22:45:17.9746 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Info] => logconsole logfile
+2022-07-18 22:45:17.9746 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Warn] => logconsole logfile
+2022-07-18 22:45:17.9746 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Error] => logconsole logfile
+2022-07-18 22:45:17.9746 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Fatal] => logconsole logfile
+2022-07-18 22:45:17.9936 Info Shutdown() called. Logger closing...
+2022-07-18 22:45:17.9936 Info Closing old configuration.
+2022-07-18 22:45:17.9936 Debug LogFactory Flush with timeout=15 secs
+2022-07-18 22:45:17.9936 Trace Flushing all 2 targets...
+2022-07-18 22:45:17.9936 Trace ForEachItemInParallel() 2 items
+2022-07-18 22:45:17.9936 Trace FileTarget(Name=logfile): FlushAsync
+2022-07-18 22:45:17.9936 Trace Continuation invoked: 
+2022-07-18 22:45:17.9936 Trace Continuation invoked: 
+2022-07-18 22:45:17.9936 Trace Parallel task completed. 0 items remaining
+2022-07-18 22:45:17.9936 Trace Parallel task completed. 1 items remaining
+2022-07-18 22:45:18.0044 Debug Flush completed
+2022-07-18 22:45:18.0044 Trace FileTarget(Name=logfile): FlushAsync Done
+2022-07-18 22:45:18.0044 Debug Closing logging configuration...
+2022-07-18 22:45:18.0044 Trace Closing ColoredConsoleTarget(Name=logconsole)
+2022-07-18 22:45:18.0044 Debug ColoredConsoleTarget(Name=logconsole): Closing...
+2022-07-18 22:45:18.0044 Debug ColoredConsoleTarget(Name=logconsole): Closed.
+2022-07-18 22:45:18.0044 Trace Closing ${longdate} ${uppercase:${level}} ${message}
+2022-07-18 22:45:18.0044 Trace Closing Layout Renderer: ${longdate}
+2022-07-18 22:45:18.0044 Trace Closing Layout Renderer: ${literal}
+2022-07-18 22:45:18.0044 Trace Closing Layout Renderer: ${uppercase}
+2022-07-18 22:45:18.0044 Trace Closing ${level}
+2022-07-18 22:45:18.0044 Trace Closing Layout Renderer: ${level}
+2022-07-18 22:45:18.0044 Trace Closing Layout Renderer: ${literal}
+2022-07-18 22:45:18.0044 Trace Closing Layout Renderer: ${message}
+2022-07-18 22:45:18.0044 Trace Closing FileTarget(Name=logfile)
+2022-07-18 22:45:18.0044 Debug FileTarget(Name=logfile): Closing...
+2022-07-18 22:45:18.0044 Trace FileTarget(Name=logfile): FinalizeFile 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\2022-07-18_logfile.txt, isArchiving: False'
+2022-07-18 22:45:18.0044 Debug FileTarget(Name=logfile): FileAppender Closing Invalidate - F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\2022-07-18_logfile.txt
+2022-07-18 22:45:18.0044 Trace FileTarget: Closing 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\2022-07-18_logfile.txt'
+2022-07-18 22:45:18.0044 Debug FileTarget(Name=logfile): Closed.
+2022-07-18 22:45:18.0044 Trace Closing F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt
+2022-07-18 22:45:18.0044 Trace Closing Layout Renderer: ${literal}
+2022-07-18 22:45:18.0044 Trace Closing Layout Renderer: ${shortdate}
+2022-07-18 22:45:18.0044 Trace Closing Layout Renderer: ${literal}
+2022-07-18 22:45:18.0044 Trace Closing ${longdate} ${level:uppercase=true} ${message}
+2022-07-18 22:45:18.0211 Trace Closing Layout Renderer: ${longdate}
+2022-07-18 22:45:18.0211 Trace Closing Layout Renderer: ${literal}
+2022-07-18 22:45:18.0211 Trace Closing Layout Renderer: ${level}
+2022-07-18 22:45:18.0211 Trace Closing Layout Renderer: ${literal}
+2022-07-18 22:45:18.0211 Trace Closing Layout Renderer: ${message}
+2022-07-18 22:45:18.0211 Debug Finished closing logging configuration.
+2022-07-18 22:45:18.0211 Debug Stopping file watching for path 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API' filter 'nlog.config'
+2022-07-18 22:45:18.0211 Debug Targets not configured for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2022-07-18 22:45:18.0211 Debug Targets not configured for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2022-07-18 22:45:18.0211 Debug Targets not configured for Logger: Microsoft.Hosting.Lifetime
+2022-07-18 22:45:18.0211 Debug Targets not configured for Logger: Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer
+2022-07-18 22:45:18.0211 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy
+2022-07-18 22:45:18.0211 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.MvcOptions
+2022-07-18 22:45:18.0211 Debug Targets not configured for Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2022-07-18 22:45:18.0211 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter
+2022-07-18 22:45:18.0211 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter
+2022-07-18 22:45:18.0211 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter
+2022-07-18 22:45:18.0211 Debug Targets not configured for Logger: Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter
+2022-07-18 22:45:18.0211 Debug Targets not configured for Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2022-07-18 22:45:18.0211 Debug Targets not configured for Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2022-07-18 22:45:18.0211 Info Logger has been closed down.
+2022-07-18 22:47:05.6491 Info Message Template Auto Format enabled
+2022-07-18 22:47:05.7688 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2022-07-18 22:47:05.7688 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt'
+2022-07-18 22:47:05.7688 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:47:05.7869 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-07-18 22:47:05.7869 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2022-07-18 22:47:05.7869 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:47:05.7869 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:47:05.7869 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:47:05.7869 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:47:05.7869 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:47:05.7869 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:47:05.7869 Info Adding target FileTarget(Name=logfile)
+2022-07-18 22:47:05.7869 Debug Registered target logfile: NLog.Targets.FileTarget
+2022-07-18 22:47:05.8031 Debug Setting 'NLog.Targets.ColoredConsoleTarget.name' to 'logconsole'
+2022-07-18 22:47:05.8031 Debug Setting 'NLog.Targets.ColoredConsoleTarget.layout' to '${longdate} ${uppercase:${level}} ${message}'
+2022-07-18 22:47:05.8031 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:47:05.8031 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:47:05.8031 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.Inner' to '${level}'
+2022-07-18 22:47:05.8031 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:47:05.8031 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:47:05.8031 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:47:05.8031 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-07-18 22:47:05.8031 Trace  Scanning Property Inner '${level}' NLog.Layouts
+2022-07-18 22:47:05.8031 Trace  Scanning SimpleLayout '${level}'
+2022-07-18 22:47:05.8031 Trace   Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:47:05.8031 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:47:05.8031 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:47:05.8031 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:47:05.8031 Info Adding target ColoredConsoleTarget(Name=logconsole)
+2022-07-18 22:47:05.8031 Debug Registered target logconsole: NLog.Targets.ColoredConsoleTarget
+2022-07-18 22:47:05.8031 Trace ParseRulesElement
+2022-07-18 22:47:05.8285 Debug Watching file-filter 'nlog.config' in directory: F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API
+2022-07-18 22:47:05.8285 Debug --- NLog configuration dump ---
+2022-07-18 22:47:05.8285 Debug Targets:
+2022-07-18 22:47:05.8334 Debug FileTarget(Name=logfile)
+2022-07-18 22:47:05.8334 Debug ColoredConsoleTarget(Name=logconsole)
+2022-07-18 22:47:05.8334 Debug Rules:
+2022-07-18 22:47:05.8334 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ logconsole ]
+2022-07-18 22:47:05.8334 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]
+2022-07-18 22:47:05.8334 Debug --- End of NLog configuration dump ---
+2022-07-18 22:47:05.8334 Trace FindReachableObject<System.Object>:
+2022-07-18 22:47:05.8334 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ logconsole ]'
+2022-07-18 22:47:05.8334 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-07-18 22:47:05.8334 Trace  Scanning ColoredConsoleTarget 'ColoredConsoleTarget(Name=logconsole)'
+2022-07-18 22:47:05.8334 Trace   Scanning Property Layout '${longdate} ${uppercase:${level}} ${message}' NLog.Layouts
+2022-07-18 22:47:05.8334 Trace   Scanning SimpleLayout '${longdate} ${uppercase:${level}} ${message}'
+2022-07-18 22:47:05.8334 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:47:05.8334 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:47:05.8334 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:47:05.8334 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-07-18 22:47:05.8334 Trace     Scanning Property Inner '${level}' NLog.Layouts
+2022-07-18 22:47:05.8334 Trace     Scanning SimpleLayout '${level}'
+2022-07-18 22:47:05.8334 Trace      Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:47:05.8334 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:47:05.8334 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:47:05.8334 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:47:05.8334 Trace   Scanning Property RowHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleRowHighlightingRule]' System.Collections.Generic
+2022-07-18 22:47:05.8334 Trace   Scanning Property WordHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleWordHighlightingRule]' System.Collections.Generic
+2022-07-18 22:47:05.8334 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-07-18 22:47:05.8334 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-07-18 22:47:05.8479 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2022-07-18 22:47:05.8479 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-07-18 22:47:05.8479 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-07-18 22:47:05.8479 Trace   Scanning Property FileName 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt' NLog.Layouts
+2022-07-18 22:47:05.8479 Trace   Scanning SimpleLayout 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt'
+2022-07-18 22:47:05.8479 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:47:05.8479 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:47:05.8479 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-07-18 22:47:05.8479 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:47:05.8479 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-07-18 22:47:05.8479 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-07-18 22:47:05.8479 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:47:05.8479 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:47:05.8479 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:47:05.8479 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:47:05.8479 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:47:05.8479 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:47:05.8479 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2022-07-18 22:47:05.8479 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-07-18 22:47:05.8479 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-07-18 22:47:05.8479 Info Validating config: TargetNames=logconsole, logfile, ConfigItems=22, FilePath=F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\nlog.config
+2022-07-18 22:47:05.8479 Debug Unused target checking is started... Rule Count: 2, Target Count: 2
+2022-07-18 22:47:05.8679 Debug Unused target checking is completed. Total Rule Count: 2, Total Target Count: 2, Unused Target Count: 0
+2022-07-18 22:47:05.8679 Trace Initializing Layout Renderer: ${message}
+2022-07-18 22:47:05.8679 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:47:05.8679 Trace Initializing Layout Renderer: ${level}
+2022-07-18 22:47:05.8679 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:47:05.8679 Trace Initializing Layout Renderer: ${longdate}
+2022-07-18 22:47:05.8679 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2022-07-18 22:47:05.8679 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:47:05.8679 Trace Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-07-18 22:47:05.8679 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:47:05.8679 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:47:05.8679 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:47:05.8679 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:47:05.8679 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:47:05.8679 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:47:05.8679 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:47:05.8679 Trace Initializing Layout Renderer: ${shortdate}
+2022-07-18 22:47:05.8679 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:47:05.8831 Trace Initializing F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt
+2022-07-18 22:47:05.8831 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:47:05.8831 Trace Scanning SimpleLayout 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt'
+2022-07-18 22:47:05.8831 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:47:05.8831 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:47:05.8831 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-07-18 22:47:05.8831 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:47:05.8831 Trace Initializing FileTarget(Name=logfile)
+2022-07-18 22:47:05.8831 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-07-18 22:47:05.8831 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-07-18 22:47:05.8831 Trace  Scanning Property FileName 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt' NLog.Layouts
+2022-07-18 22:47:05.8831 Trace  Scanning SimpleLayout 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt'
+2022-07-18 22:47:05.8831 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-07-18 22:47:05.8831 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-07-18 22:47:05.8831 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2022-07-18 22:47:05.8831 Trace FileTarget(Name=logfile) has 2 layouts
+2022-07-18 22:47:05.8831 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.SingleProcessFileAppender+Factory
+2022-07-18 22:47:05.8831 Trace Initializing Layout Renderer: ${message}
+2022-07-18 22:47:05.8831 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:47:05.8831 Trace Initializing Layout Renderer: ${level}
+2022-07-18 22:47:05.8831 Trace Initializing ${level}
+2022-07-18 22:47:05.8831 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:47:05.8831 Trace Scanning SimpleLayout '${level}'
+2022-07-18 22:47:05.8831 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:47:05.8831 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:47:05.8831 Trace Initializing Layout Renderer: ${uppercase}
+2022-07-18 22:47:05.8831 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:47:05.8831 Trace Initializing Layout Renderer: ${longdate}
+2022-07-18 22:47:05.8831 Trace Initializing ${longdate} ${uppercase:${level}} ${message}
+2022-07-18 22:47:05.8831 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-07-18 22:47:05.8831 Trace Scanning SimpleLayout '${longdate} ${uppercase:${level}} ${message}'
+2022-07-18 22:47:05.8831 Trace  Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:47:05.8939 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:47:05.8939 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:47:05.8939 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-07-18 22:47:05.8939 Trace   Scanning Property Inner '${level}' NLog.Layouts
+2022-07-18 22:47:05.8939 Trace   Scanning SimpleLayout '${level}'
+2022-07-18 22:47:05.8939 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:47:05.8939 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:47:05.8939 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:47:05.8939 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:47:05.8939 Trace Initializing ColoredConsoleTarget(Name=logconsole)
+2022-07-18 22:47:05.8939 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-07-18 22:47:05.8939 Trace Scanning ColoredConsoleTarget 'ColoredConsoleTarget(Name=logconsole)'
+2022-07-18 22:47:05.8939 Trace  Scanning Property Layout '${longdate} ${uppercase:${level}} ${message}' NLog.Layouts
+2022-07-18 22:47:05.8939 Trace  Scanning SimpleLayout '${longdate} ${uppercase:${level}} ${message}'
+2022-07-18 22:47:05.8939 Trace  Scanning Property RowHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleRowHighlightingRule]' System.Collections.Generic
+2022-07-18 22:47:05.8939 Trace  Scanning Property WordHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleWordHighlightingRule]' System.Collections.Generic
+2022-07-18 22:47:05.8939 Trace ColoredConsoleTarget(Name=logconsole) has 1 layouts
+2022-07-18 22:47:06.1501 Debug ScanAssembly('NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-07-18 22:47:06.1501 Trace Assembly 'NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2022-07-18 22:47:06.2233 Debug Hide assemblies for callsite
+2022-07-18 22:47:06.2233 Debug ScanAssembly('NLog.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-07-18 22:47:06.2233 Trace Assembly 'NLog.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2022-07-18 22:47:06.2233 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2022-07-18 22:47:06.2233 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2022-07-18 22:47:06.2233 Debug Skip loading NLogLoggingConfiguration from empty config section: NLog
+2022-07-18 22:47:06.2233 Trace FindReachableObject<System.Object>:
+2022-07-18 22:47:06.2233 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ logconsole ]'
+2022-07-18 22:47:06.2233 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-07-18 22:47:06.2233 Trace  Scanning ColoredConsoleTarget 'ColoredConsoleTarget(Name=logconsole)'
+2022-07-18 22:47:06.2233 Trace   Scanning Property Layout '${longdate} ${uppercase:${level}} ${message}' NLog.Layouts
+2022-07-18 22:47:06.2233 Trace   Scanning SimpleLayout '${longdate} ${uppercase:${level}} ${message}'
+2022-07-18 22:47:06.2233 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:47:06.2233 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:47:06.2233 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:47:06.2233 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-07-18 22:47:06.2233 Trace     Scanning Property Inner '${level}' NLog.Layouts
+2022-07-18 22:47:06.2233 Trace     Scanning SimpleLayout '${level}'
+2022-07-18 22:47:06.2233 Trace      Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:47:06.2233 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:47:06.2233 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:47:06.2233 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:47:06.2233 Trace   Scanning Property RowHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleRowHighlightingRule]' System.Collections.Generic
+2022-07-18 22:47:06.2233 Trace   Scanning Property WordHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleWordHighlightingRule]' System.Collections.Generic
+2022-07-18 22:47:06.2233 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-07-18 22:47:06.2233 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-07-18 22:47:06.2233 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] writeTo: [ logfile ]'
+2022-07-18 22:47:06.2233 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-07-18 22:47:06.2233 Trace  Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-07-18 22:47:06.2233 Trace   Scanning Property FileName 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt' NLog.Layouts
+2022-07-18 22:47:06.2233 Trace   Scanning SimpleLayout 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt'
+2022-07-18 22:47:06.2233 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:47:06.2233 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:47:06.2233 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-07-18 22:47:06.2233 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:47:06.2379 Trace   Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-07-18 22:47:06.2379 Trace   Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-07-18 22:47:06.2379 Trace    Scanning Property LayoutRenderers 'NLog.LayoutRenderers.LayoutRenderer[]' System.Collections.Generic
+2022-07-18 22:47:06.2379 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-07-18 22:47:06.2379 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:47:06.2379 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-07-18 22:47:06.2379 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-07-18 22:47:06.2379 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-07-18 22:47:06.2379 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2022-07-18 22:47:06.2379 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-07-18 22:47:06.2379 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-07-18 22:47:06.2379 Info Validating config: TargetNames=logconsole, logfile, ConfigItems=22, FilePath=F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\nlog.config
+2022-07-18 22:47:06.2379 Trace Initializing Layout Renderer: ${message}
+2022-07-18 22:47:06.2379 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:47:06.2379 Trace Initializing Layout Renderer: ${level}
+2022-07-18 22:47:06.2379 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:47:06.2379 Trace Initializing Layout Renderer: ${longdate}
+2022-07-18 22:47:06.2379 Trace Initializing ${longdate} ${level:uppercase=true} ${message}
+2022-07-18 22:47:06.2379 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:47:06.2379 Trace Initializing Layout Renderer: ${shortdate}
+2022-07-18 22:47:06.2379 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:47:06.2379 Trace Initializing F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt
+2022-07-18 22:47:06.2379 Trace Initializing FileTarget(Name=logfile)
+2022-07-18 22:47:06.2379 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-07-18 22:47:06.2379 Trace Scanning FileTarget 'FileTarget(Name=logfile)'
+2022-07-18 22:47:06.2379 Trace  Scanning Property FileName 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt' NLog.Layouts
+2022-07-18 22:47:06.2379 Trace  Scanning SimpleLayout 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\${shortdate}_logfile.txt'
+2022-07-18 22:47:06.2379 Trace  Scanning Property Layout '${longdate} ${level:uppercase=true} ${message}' NLog.Layouts
+2022-07-18 22:47:06.2379 Trace  Scanning SimpleLayout '${longdate} ${level:uppercase=true} ${message}'
+2022-07-18 22:47:06.2379 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2022-07-18 22:47:06.2379 Trace FileTarget(Name=logfile) has 2 layouts
+2022-07-18 22:47:06.2379 Trace Initializing Layout Renderer: ${message}
+2022-07-18 22:47:06.2379 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:47:06.2379 Trace Initializing Layout Renderer: ${level}
+2022-07-18 22:47:06.2379 Trace Initializing ${level}
+2022-07-18 22:47:06.2379 Trace Initializing Layout Renderer: ${uppercase}
+2022-07-18 22:47:06.2379 Trace Initializing Layout Renderer: ${literal}
+2022-07-18 22:47:06.2379 Trace Initializing Layout Renderer: ${longdate}
+2022-07-18 22:47:06.2379 Trace Initializing ${longdate} ${uppercase:${level}} ${message}
+2022-07-18 22:47:06.2379 Trace Initializing ColoredConsoleTarget(Name=logconsole)
+2022-07-18 22:47:06.2379 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-07-18 22:47:06.2379 Trace Scanning ColoredConsoleTarget 'ColoredConsoleTarget(Name=logconsole)'
+2022-07-18 22:47:06.2379 Trace  Scanning Property Layout '${longdate} ${uppercase:${level}} ${message}' NLog.Layouts
+2022-07-18 22:47:06.2379 Trace  Scanning SimpleLayout '${longdate} ${uppercase:${level}} ${message}'
+2022-07-18 22:47:06.2379 Trace  Scanning Property RowHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleRowHighlightingRule]' System.Collections.Generic
+2022-07-18 22:47:06.2379 Trace  Scanning Property WordHighlightingRules 'System.Collections.Generic.List`1[NLog.Targets.ConsoleWordHighlightingRule]' System.Collections.Generic
+2022-07-18 22:47:06.2379 Trace ColoredConsoleTarget(Name=logconsole) has 1 layouts
+2022-07-18 22:47:06.2712 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2022-07-18 22:47:06.2712 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Trace] => logconsole
+2022-07-18 22:47:06.2712 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Debug] => logconsole logfile
+2022-07-18 22:47:06.2712 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Info] => logconsole logfile
+2022-07-18 22:47:06.2712 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Warn] => logconsole logfile
+2022-07-18 22:47:06.2712 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Error] => logconsole logfile
+2022-07-18 22:47:06.2712 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Fatal] => logconsole logfile
+2022-07-18 22:47:06.2712 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2022-07-18 22:47:06.2712 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Trace] => logconsole
+2022-07-18 22:47:06.2712 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Debug] => logconsole logfile
+2022-07-18 22:47:06.2712 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Info] => logconsole logfile
+2022-07-18 22:47:06.2712 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Warn] => logconsole logfile
+2022-07-18 22:47:06.2712 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Error] => logconsole logfile
+2022-07-18 22:47:06.2712 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Fatal] => logconsole logfile
+2022-07-18 22:47:06.2712 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Hosting.Lifetime
+2022-07-18 22:47:06.2712 Debug Logger Microsoft.Hosting.Lifetime [Trace] => logconsole
+2022-07-18 22:47:06.2712 Debug Logger Microsoft.Hosting.Lifetime [Debug] => logconsole logfile
+2022-07-18 22:47:06.2712 Debug Logger Microsoft.Hosting.Lifetime [Info] => logconsole logfile
+2022-07-18 22:47:06.2712 Debug Logger Microsoft.Hosting.Lifetime [Warn] => logconsole logfile
+2022-07-18 22:47:06.2712 Debug Logger Microsoft.Hosting.Lifetime [Error] => logconsole logfile
+2022-07-18 22:47:06.2712 Debug Logger Microsoft.Hosting.Lifetime [Fatal] => logconsole logfile
+2022-07-18 22:47:06.3219 Debug FileTarget(Name=logfile): Preparing for new file 'F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\2022-07-18_logfile.txt'
+2022-07-18 22:47:06.3219 Debug FileTarget(Name=logfile): Creating file appender: F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\2022-07-18_logfile.txt
+2022-07-18 22:47:06.3219 Trace FileTarget(Name=logfile): Opening F:\VS 2019 Web Projects\github\CompanyEmployeesComponent\backend\CompanyEmployees.API\Logs\2022-07-18_logfile.txt with allowFileSharedWriting=False
+2022-07-18 22:47:06.3376 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer
+2022-07-18 22:47:06.3376 Debug Logger Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer [Trace] => logconsole
+2022-07-18 22:47:06.3376 Debug Logger Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer [Debug] => logconsole logfile
+2022-07-18 22:47:06.3376 Debug Logger Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer [Info] => logconsole logfile
+2022-07-18 22:47:06.3376 Debug Logger Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer [Warn] => logconsole logfile
+2022-07-18 22:47:06.3376 Debug Logger Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer [Error] => logconsole logfile
+2022-07-18 22:47:06.3376 Debug Logger Microsoft.AspNetCore.Server.IIS.Core.IISHttpServer [Fatal] => logconsole logfile
+2022-07-18 22:47:06.3555 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy
+2022-07-18 22:47:06.3555 Debug Logger Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy [Trace] => logconsole
+2022-07-18 22:47:06.3555 Debug Logger Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy [Debug] => logconsole logfile
+2022-07-18 22:47:06.3555 Debug Logger Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy [Info] => logconsole logfile
+2022-07-18 22:47:06.3555 Debug Logger Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy [Warn] => logconsole logfile
+2022-07-18 22:47:06.3555 Debug Logger Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy [Error] => logconsole logfile
+2022-07-18 22:47:06.3555 Debug Logger Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy [Fatal] => logconsole logfile
+2022-07-18 22:47:06.3739 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.MvcOptions
+2022-07-18 22:47:06.3739 Debug Logger Microsoft.AspNetCore.Mvc.MvcOptions [Trace] => logconsole
+2022-07-18 22:47:06.3739 Debug Logger Microsoft.AspNetCore.Mvc.MvcOptions [Debug] => logconsole logfile
+2022-07-18 22:47:06.3739 Debug Logger Microsoft.AspNetCore.Mvc.MvcOptions [Info] => logconsole logfile
+2022-07-18 22:47:06.3739 Debug Logger Microsoft.AspNetCore.Mvc.MvcOptions [Warn] => logconsole logfile
+2022-07-18 22:47:06.3739 Debug Logger Microsoft.AspNetCore.Mvc.MvcOptions [Error] => logconsole logfile
+2022-07-18 22:47:06.3739 Debug Logger Microsoft.AspNetCore.Mvc.MvcOptions [Fatal] => logconsole logfile
+2022-07-18 22:47:06.3739 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2022-07-18 22:47:06.3739 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Trace] => logconsole
+2022-07-18 22:47:06.3739 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Debug] => logconsole logfile
+2022-07-18 22:47:06.3739 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Info] => logconsole logfile
+2022-07-18 22:47:06.3739 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Warn] => logconsole logfile
+2022-07-18 22:47:06.3739 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Error] => logconsole logfile
+2022-07-18 22:47:06.3739 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Fatal] => logconsole logfile
+2022-07-18 22:47:06.4788 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter
+2022-07-18 22:47:06.4788 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Trace] => logconsole
+2022-07-18 22:47:06.4788 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Debug] => logconsole logfile
+2022-07-18 22:47:06.4788 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Info] => logconsole logfile
+2022-07-18 22:47:06.4788 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Warn] => logconsole logfile
+2022-07-18 22:47:06.4788 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Error] => logconsole logfile
+2022-07-18 22:47:06.4788 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Fatal] => logconsole logfile
+2022-07-18 22:47:06.5184 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter
+2022-07-18 22:47:06.5184 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter [Trace] => logconsole
+2022-07-18 22:47:06.5226 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter [Debug] => logconsole logfile
+2022-07-18 22:47:06.5226 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter [Info] => logconsole logfile
+2022-07-18 22:47:06.5226 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter [Warn] => logconsole logfile
+2022-07-18 22:47:06.5226 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter [Error] => logconsole logfile
+2022-07-18 22:47:06.5226 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter [Fatal] => logconsole logfile
+2022-07-18 22:47:06.5226 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter
+2022-07-18 22:47:06.5226 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter [Trace] => logconsole
+2022-07-18 22:47:06.5226 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter [Debug] => logconsole logfile
+2022-07-18 22:47:06.5226 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter [Info] => logconsole logfile
+2022-07-18 22:47:06.5226 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter [Warn] => logconsole logfile
+2022-07-18 22:47:06.5226 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter [Error] => logconsole logfile
+2022-07-18 22:47:06.5226 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter [Fatal] => logconsole logfile
+2022-07-18 22:47:06.5416 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter
+2022-07-18 22:47:06.5416 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter [Trace] => logconsole
+2022-07-18 22:47:06.5416 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter [Debug] => logconsole logfile
+2022-07-18 22:47:06.5416 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter [Info] => logconsole logfile
+2022-07-18 22:47:06.5416 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter [Warn] => logconsole logfile
+2022-07-18 22:47:06.5416 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter [Error] => logconsole logfile
+2022-07-18 22:47:06.5416 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.XmlDataContractSerializerOutputFormatter [Fatal] => logconsole logfile
+2022-07-18 22:47:06.6638 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2022-07-18 22:47:06.6638 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Trace] => logconsole
+2022-07-18 22:47:06.6638 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Debug] => logconsole logfile
+2022-07-18 22:47:06.6638 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Info] => logconsole logfile
+2022-07-18 22:47:06.6638 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Warn] => logconsole logfile
+2022-07-18 22:47:06.6638 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Error] => logconsole logfile
+2022-07-18 22:47:06.6638 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Fatal] => logconsole logfile
+2022-07-18 22:47:06.6638 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2022-07-18 22:47:06.6638 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Trace] => logconsole
+2022-07-18 22:47:06.6638 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Debug] => logconsole logfile
+2022-07-18 22:47:06.6638 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Info] => logconsole logfile
+2022-07-18 22:47:06.6638 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Warn] => logconsole logfile
+2022-07-18 22:47:06.6638 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Error] => logconsole logfile
+2022-07-18 22:47:06.6638 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Fatal] => logconsole logfile
+2022-07-18 22:47:06.6638 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.Extensions.Caching.Memory.MemoryCache
+2022-07-18 22:47:06.6638 Debug Logger Microsoft.Extensions.Caching.Memory.MemoryCache [Trace] => logconsole
+2022-07-18 22:47:06.6638 Debug Logger Microsoft.Extensions.Caching.Memory.MemoryCache [Debug] => logconsole logfile
+2022-07-18 22:47:06.6638 Debug Logger Microsoft.Extensions.Caching.Memory.MemoryCache [Info] => logconsole logfile
+2022-07-18 22:47:06.6638 Debug Logger Microsoft.Extensions.Caching.Memory.MemoryCache [Warn] => logconsole logfile
+2022-07-18 22:47:06.6638 Debug Logger Microsoft.Extensions.Caching.Memory.MemoryCache [Error] => logconsole logfile
+2022-07-18 22:47:06.6638 Debug Logger Microsoft.Extensions.Caching.Memory.MemoryCache [Fatal] => logconsole logfile
+2022-07-18 22:47:06.6812 Debug Targets configured when LogLevel >= Trace for Logger: AspNetCoreRateLimit.IpRateLimitMiddleware
+2022-07-18 22:47:06.6812 Debug Logger AspNetCoreRateLimit.IpRateLimitMiddleware [Trace] => logconsole
+2022-07-18 22:47:06.6812 Debug Logger AspNetCoreRateLimit.IpRateLimitMiddleware [Debug] => logconsole logfile
+2022-07-18 22:47:06.6812 Debug Logger AspNetCoreRateLimit.IpRateLimitMiddleware [Info] => logconsole logfile
+2022-07-18 22:47:06.6812 Debug Logger AspNetCoreRateLimit.IpRateLimitMiddleware [Warn] => logconsole logfile
+2022-07-18 22:47:06.6812 Debug Logger AspNetCoreRateLimit.IpRateLimitMiddleware [Error] => logconsole logfile
+2022-07-18 22:47:06.6812 Debug Logger AspNetCoreRateLimit.IpRateLimitMiddleware [Fatal] => logconsole logfile
+2022-07-18 22:47:06.6812 Debug Targets configured when LogLevel >= Trace for Logger: Marvin.Cache.Headers.HttpCacheHeadersMiddleware
+2022-07-18 22:47:06.6812 Debug Logger Marvin.Cache.Headers.HttpCacheHeadersMiddleware [Trace] => logconsole
+2022-07-18 22:47:06.6812 Debug Logger Marvin.Cache.Headers.HttpCacheHeadersMiddleware [Debug] => logconsole logfile
+2022-07-18 22:47:06.6812 Debug Logger Marvin.Cache.Headers.HttpCacheHeadersMiddleware [Info] => logconsole logfile
+2022-07-18 22:47:06.6812 Debug Logger Marvin.Cache.Headers.HttpCacheHeadersMiddleware [Warn] => logconsole logfile
+2022-07-18 22:47:06.6812 Debug Logger Marvin.Cache.Headers.HttpCacheHeadersMiddleware [Error] => logconsole logfile
+2022-07-18 22:47:06.6812 Debug Logger Marvin.Cache.Headers.HttpCacheHeadersMiddleware [Fatal] => logconsole logfile
+2022-07-18 22:47:06.7348 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware
+2022-07-18 22:47:06.7348 Debug Logger Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware [Trace] => logconsole
+2022-07-18 22:47:06.7348 Debug Logger Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware [Debug] => logconsole logfile
+2022-07-18 22:47:06.7348 Debug Logger Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware [Info] => logconsole logfile
+2022-07-18 22:47:06.7348 Debug Logger Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware [Warn] => logconsole logfile
+2022-07-18 22:47:06.7348 Debug Logger Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware [Error] => logconsole logfile
+2022-07-18 22:47:06.7348 Debug Logger Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware [Fatal] => logconsole logfile
+2022-07-18 22:47:06.7348 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.HttpOverrides.ForwardedHeadersMiddleware
+2022-07-18 22:47:06.7348 Debug Logger Microsoft.AspNetCore.HttpOverrides.ForwardedHeadersMiddleware [Trace] => logconsole
+2022-07-18 22:47:06.7348 Debug Logger Microsoft.AspNetCore.HttpOverrides.ForwardedHeadersMiddleware [Debug] => logconsole logfile
+2022-07-18 22:47:06.7348 Debug Logger Microsoft.AspNetCore.HttpOverrides.ForwardedHeadersMiddleware [Info] => logconsole logfile
+2022-07-18 22:47:06.7348 Debug Logger Microsoft.AspNetCore.HttpOverrides.ForwardedHeadersMiddleware [Warn] => logconsole logfile
+2022-07-18 22:47:06.7348 Debug Logger Microsoft.AspNetCore.HttpOverrides.ForwardedHeadersMiddleware [Error] => logconsole logfile
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.HttpOverrides.ForwardedHeadersMiddleware [Fatal] => logconsole logfile
+2022-07-18 22:47:06.7379 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Cors.Infrastructure.CorsService
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.Cors.Infrastructure.CorsService [Trace] => logconsole
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.Cors.Infrastructure.CorsService [Debug] => logconsole logfile
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.Cors.Infrastructure.CorsService [Info] => logconsole logfile
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.Cors.Infrastructure.CorsService [Warn] => logconsole logfile
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.Cors.Infrastructure.CorsService [Error] => logconsole logfile
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.Cors.Infrastructure.CorsService [Fatal] => logconsole logfile
+2022-07-18 22:47:06.7379 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware [Trace] => logconsole
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware [Debug] => logconsole logfile
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware [Info] => logconsole logfile
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware [Warn] => logconsole logfile
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware [Error] => logconsole logfile
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware [Fatal] => logconsole logfile
+2022-07-18 22:47:06.7379 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Trace] => logconsole
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Debug] => logconsole logfile
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Info] => logconsole logfile
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Warn] => logconsole logfile
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Error] => logconsole logfile
+2022-07-18 22:47:06.7379 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Fatal] => logconsole logfile
+2022-07-18 22:47:06.7541 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware
+2022-07-18 22:47:06.7541 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Trace] => logconsole
+2022-07-18 22:47:06.7541 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Debug] => logconsole logfile
+2022-07-18 22:47:06.7541 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Info] => logconsole logfile
+2022-07-18 22:47:06.7541 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Warn] => logconsole logfile
+2022-07-18 22:47:06.7541 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Error] => logconsole logfile
+2022-07-18 22:47:06.7541 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Fatal] => logconsole logfile
+2022-07-18 22:47:06.7811 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware
+2022-07-18 22:47:06.7811 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Trace] => logconsole
+2022-07-18 22:47:06.7811 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Debug] => logconsole logfile
+2022-07-18 22:47:06.7811 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Info] => logconsole logfile
+2022-07-18 22:47:06.7811 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Warn] => logconsole logfile
+2022-07-18 22:47:06.7811 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Error] => logconsole logfile
+2022-07-18 22:47:06.7811 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Fatal] => logconsole logfile
+2022-07-18 22:47:06.7811 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware
+2022-07-18 22:47:06.7811 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Trace] => logconsole
+2022-07-18 22:47:06.7811 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Debug] => logconsole logfile
+2022-07-18 22:47:06.7848 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Info] => logconsole logfile
+2022-07-18 22:47:06.7848 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Warn] => logconsole logfile
+2022-07-18 22:47:06.7848 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Error] => logconsole logfile
+2022-07-18 22:47:06.7848 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Fatal] => logconsole logfile
+2022-07-18 22:47:06.7848 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware
+2022-07-18 22:47:06.7848 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware [Trace] => logconsole
+2022-07-18 22:47:06.7848 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware [Debug] => logconsole logfile
+2022-07-18 22:47:06.7848 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware [Info] => logconsole logfile
+2022-07-18 22:47:06.7848 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware [Warn] => logconsole logfile
+2022-07-18 22:47:06.7848 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware [Error] => logconsole logfile
+2022-07-18 22:47:06.7848 Debug Logger Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware [Fatal] => logconsole logfile
+2022-07-18 22:47:07.1737 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Routing.ApiVersionMatcherPolicy
+2022-07-18 22:47:07.1737 Debug Logger Microsoft.AspNetCore.Mvc.Routing.ApiVersionMatcherPolicy [Trace] => logconsole
+2022-07-18 22:47:07.1737 Debug Logger Microsoft.AspNetCore.Mvc.Routing.ApiVersionMatcherPolicy [Debug] => logconsole logfile
+2022-07-18 22:47:07.1737 Debug Logger Microsoft.AspNetCore.Mvc.Routing.ApiVersionMatcherPolicy [Info] => logconsole logfile
+2022-07-18 22:47:07.1737 Debug Logger Microsoft.AspNetCore.Mvc.Routing.ApiVersionMatcherPolicy [Warn] => logconsole logfile
+2022-07-18 22:47:07.1737 Debug Logger Microsoft.AspNetCore.Mvc.Routing.ApiVersionMatcherPolicy [Error] => logconsole logfile
+2022-07-18 22:47:07.1737 Debug Logger Microsoft.AspNetCore.Mvc.Routing.ApiVersionMatcherPolicy [Fatal] => logconsole logfile
+2022-07-18 22:47:07.2087 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Routing.Matching.DfaMatcher
+2022-07-18 22:47:07.2087 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Trace] => logconsole
+2022-07-18 22:47:07.2087 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Debug] => logconsole logfile
+2022-07-18 22:47:07.2087 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Info] => logconsole logfile
+2022-07-18 22:47:07.2087 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Warn] => logconsole logfile
+2022-07-18 22:47:07.2087 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Error] => logconsole logfile
+2022-07-18 22:47:07.2087 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Fatal] => logconsole logfile
+2022-07-18 22:47:07.2856 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory
+2022-07-18 22:47:07.2856 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Trace] => logconsole
+2022-07-18 22:47:07.2856 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Debug] => logconsole logfile
+2022-07-18 22:47:07.2856 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Info] => logconsole logfile
+2022-07-18 22:47:07.2856 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Warn] => logconsole logfile
+2022-07-18 22:47:07.2856 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Error] => logconsole logfile
+2022-07-18 22:47:07.2856 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Fatal] => logconsole logfile
+2022-07-18 22:47:07.3035 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder
+2022-07-18 22:47:07.3035 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Trace] => logconsole
+2022-07-18 22:47:07.3035 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Debug] => logconsole logfile
+2022-07-18 22:47:07.3035 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Info] => logconsole logfile
+2022-07-18 22:47:07.3035 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Warn] => logconsole logfile
+2022-07-18 22:47:07.3035 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Error] => logconsole logfile
+2022-07-18 22:47:07.3035 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Fatal] => logconsole logfile
+2022-07-18 22:47:07.3035 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2022-07-18 22:47:07.3035 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Trace] => logconsole
+2022-07-18 22:47:07.3035 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Debug] => logconsole logfile
+2022-07-18 22:47:07.3035 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Info] => logconsole logfile
+2022-07-18 22:47:07.3035 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Warn] => logconsole logfile
+2022-07-18 22:47:07.3035 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Error] => logconsole logfile
+2022-07-18 22:47:07.3035 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Fatal] => logconsole logfile
+2022-07-18 22:47:07.3160 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter
+2022-07-18 22:47:07.3160 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Trace] => logconsole
+2022-07-18 22:47:07.3160 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Debug] => logconsole logfile
+2022-07-18 22:47:07.3160 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Info] => logconsole logfile
+2022-07-18 22:47:07.3160 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Warn] => logconsole logfile
+2022-07-18 22:47:07.3160 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Error] => logconsole logfile
+2022-07-18 22:47:07.3160 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Fatal] => logconsole logfile
+2022-07-18 22:47:07.3160 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Filters.ResponseCacheFilter
+2022-07-18 22:47:07.3160 Debug Logger Microsoft.AspNetCore.Mvc.Filters.ResponseCacheFilter [Trace] => logconsole
+2022-07-18 22:47:07.3160 Debug Logger Microsoft.AspNetCore.Mvc.Filters.ResponseCacheFilter [Debug] => logconsole logfile
+2022-07-18 22:47:07.3160 Debug Logger Microsoft.AspNetCore.Mvc.Filters.ResponseCacheFilter [Info] => logconsole logfile
+2022-07-18 22:47:07.3160 Debug Logger Microsoft.AspNetCore.Mvc.Filters.ResponseCacheFilter [Warn] => logconsole logfile
+2022-07-18 22:47:07.3160 Debug Logger Microsoft.AspNetCore.Mvc.Filters.ResponseCacheFilter [Error] => logconsole logfile
+2022-07-18 22:47:07.3160 Debug Logger Microsoft.AspNetCore.Mvc.Filters.ResponseCacheFilter [Fatal] => logconsole logfile
+2022-07-18 22:47:07.9191 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.EntityFrameworkCore.Infrastructure
+2022-07-18 22:47:07.9191 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Trace] => logconsole
+2022-07-18 22:47:07.9191 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Debug] => logconsole logfile
+2022-07-18 22:47:07.9191 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Info] => logconsole logfile
+2022-07-18 22:47:07.9191 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Warn] => logconsole logfile
+2022-07-18 22:47:07.9191 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Error] => logconsole logfile
+2022-07-18 22:47:07.9191 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Fatal] => logconsole logfile
+2022-07-18 22:47:08.2742 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.EntityFrameworkCore.ChangeTracking
+2022-07-18 22:47:08.2742 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Trace] => logconsole
+2022-07-18 22:47:08.2742 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Debug] => logconsole logfile
+2022-07-18 22:47:08.2742 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Info] => logconsole logfile
+2022-07-18 22:47:08.2742 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Warn] => logconsole logfile
+2022-07-18 22:47:08.2742 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Error] => logconsole logfile
+2022-07-18 22:47:08.2742 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Fatal] => logconsole logfile
+2022-07-18 22:47:08.3183 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.EntityFrameworkCore.Model
+2022-07-18 22:47:08.3183 Debug Logger Microsoft.EntityFrameworkCore.Model [Trace] => logconsole
+2022-07-18 22:47:08.3183 Debug Logger Microsoft.EntityFrameworkCore.Model [Debug] => logconsole logfile
+2022-07-18 22:47:08.3183 Debug Logger Microsoft.EntityFrameworkCore.Model [Info] => logconsole logfile
+2022-07-18 22:47:08.3183 Debug Logger Microsoft.EntityFrameworkCore.Model [Warn] => logconsole logfile
+2022-07-18 22:47:08.3183 Debug Logger Microsoft.EntityFrameworkCore.Model [Error] => logconsole logfile
+2022-07-18 22:47:08.3183 Debug Logger Microsoft.EntityFrameworkCore.Model [Fatal] => logconsole logfile
+2022-07-18 22:47:08.3183 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.EntityFrameworkCore.Model.Validation
+2022-07-18 22:47:08.3183 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Trace] => logconsole
+2022-07-18 22:47:08.3183 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Debug] => logconsole logfile
+2022-07-18 22:47:08.3183 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Info] => logconsole logfile
+2022-07-18 22:47:08.3183 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Warn] => logconsole logfile
+2022-07-18 22:47:08.3183 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Error] => logconsole logfile
+2022-07-18 22:47:08.3183 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Fatal] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.EntityFrameworkCore.Database.Command
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Trace] => logconsole
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Debug] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Info] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Warn] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Error] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Fatal] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.EntityFrameworkCore.Query
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Query [Trace] => logconsole
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Query [Debug] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Query [Info] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Query [Warn] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Query [Error] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Query [Fatal] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.EntityFrameworkCore.Database.Transaction
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Trace] => logconsole
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Debug] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Info] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Warn] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Error] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Fatal] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.EntityFrameworkCore.Database.Connection
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Trace] => logconsole
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Debug] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Info] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Warn] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Error] => logconsole logfile
+2022-07-18 22:47:09.1204 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Fatal] => logconsole logfile
+2022-07-18 22:47:09.1509 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.EntityFrameworkCore.Update
+2022-07-18 22:47:09.1509 Debug Logger Microsoft.EntityFrameworkCore.Update [Trace] => logconsole
+2022-07-18 22:47:09.1509 Debug Logger Microsoft.EntityFrameworkCore.Update [Debug] => logconsole logfile
+2022-07-18 22:47:09.1509 Debug Logger Microsoft.EntityFrameworkCore.Update [Info] => logconsole logfile
+2022-07-18 22:47:09.1509 Debug Logger Microsoft.EntityFrameworkCore.Update [Warn] => logconsole logfile
+2022-07-18 22:47:09.1509 Debug Logger Microsoft.EntityFrameworkCore.Update [Error] => logconsole logfile
+2022-07-18 22:47:09.1509 Debug Logger Microsoft.EntityFrameworkCore.Update [Fatal] => logconsole logfile
+2022-07-18 22:47:11.7851 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector
+2022-07-18 22:47:11.7851 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Trace] => logconsole
+2022-07-18 22:47:11.7851 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Debug] => logconsole logfile
+2022-07-18 22:47:11.7851 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Info] => logconsole logfile
+2022-07-18 22:47:11.7851 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Warn] => logconsole logfile
+2022-07-18 22:47:11.7851 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Error] => logconsole logfile
+2022-07-18 22:47:11.7851 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Fatal] => logconsole logfile
+2022-07-18 22:47:11.7851 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor
+2022-07-18 22:47:11.7851 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Trace] => logconsole
+2022-07-18 22:47:11.7851 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Debug] => logconsole logfile
+2022-07-18 22:47:11.7851 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Info] => logconsole logfile
+2022-07-18 22:47:11.7851 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Warn] => logconsole logfile
+2022-07-18 22:47:11.7851 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Error] => logconsole logfile
+2022-07-18 22:47:11.7851 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Fatal] => logconsole logfile
+2022-07-18 22:48:27.4659 Debug Targets configured when LogLevel >= Trace for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder
+2022-07-18 22:48:27.4659 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Trace] => logconsole
+2022-07-18 22:48:27.4659 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Debug] => logconsole logfile
+2022-07-18 22:48:27.4659 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Info] => logconsole logfile
+2022-07-18 22:48:27.4659 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Warn] => logconsole logfile
+2022-07-18 22:48:27.4659 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Error] => logconsole logfile
+2022-07-18 22:48:27.4659 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinder [Fatal] => logconsole logfile
+2022-07-18 22:48:27.8324 Debug Targets configured when LogLevel >= Trace for Logger: LoggerService.LoggerManager
+2022-07-18 22:48:27.8324 Debug Logger LoggerService.LoggerManager [Trace] => logconsole
+2022-07-18 22:48:27.8324 Debug Logger LoggerService.LoggerManager [Debug] => logconsole logfile
+2022-07-18 22:48:27.8324 Debug Logger LoggerService.LoggerManager [Info] => logconsole logfile
+2022-07-18 22:48:27.8324 Debug Logger LoggerService.LoggerManager [Warn] => logconsole logfile
+2022-07-18 22:48:27.8324 Debug Logger LoggerService.LoggerManager [Error] => logconsole logfile
+2022-07-18 22:48:27.8324 Debug Logger LoggerService.LoggerManager [Fatal] => logconsole logfile
