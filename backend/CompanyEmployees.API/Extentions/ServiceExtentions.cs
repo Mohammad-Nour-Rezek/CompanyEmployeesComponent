@@ -1,4 +1,5 @@
-﻿using CompanyEmployees.API.Controllers;
+﻿using AspNetCoreRateLimit;
+using CompanyEmployees.API.Controllers;
 using Contracts;
 using Entities;
 using LoggerService;
@@ -116,5 +117,25 @@ namespace CompanyEmployees.API.Extentions
                     validationOptions.MustRevalidate = true;
                 }
             );
+
+        public static void ConfigureRateLimitingOptions(this IServiceCollection services)
+        {
+            var rateLimitRule = new List<RateLimitRule>
+            {
+                new RateLimitRule
+                {
+                    Endpoint = "*",
+                    Limit = 3,
+                    Period = "5m"
+                }
+            };
+
+            services.Configure<IpRateLimitOptions>(opt => opt.GeneralRules = rateLimitRule);
+
+            services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
+            services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
+            services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
+            services.AddSingleton<IProcessingStrategy, AsyncKeyLockProcessingStrategy>();
+        }
     }
 }
